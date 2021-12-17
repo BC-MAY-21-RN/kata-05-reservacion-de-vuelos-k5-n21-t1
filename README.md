@@ -1,3 +1,5 @@
+<a href="https://codeclimate.com/github/BC-MAY-21-RN/kata-05-reservacion-de-vuelos-k5-n21-t1/maintainability"><img src="https://api.codeclimate.com/v1/badges/1f4986aabf5db9b18dd4/maintainability" width="500px"/></a>
+
 ![BrightCoders Logo](img/logo-bc.png)
 
 # Reservación de Vuelos
