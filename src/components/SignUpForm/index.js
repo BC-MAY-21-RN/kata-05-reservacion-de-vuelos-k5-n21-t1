@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-export const Date = () => {
+export const SignUpForm = () => {
     return (
         <View>
-            <Text>Login</Text>
+            <Text>SignUpForm</Text>
         </View>
     )
 }
