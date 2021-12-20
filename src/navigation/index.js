@@ -11,7 +11,7 @@ const Navigate = () => {
           screenOptions = {{
             headerShown: false
           }}>
-
+        <Stack.Screen name="Login" component={Login}/>
         <Stack.Screen name="SignUp" component={SignUp}/>
         <Stack.Screen name="MyFlights" component={MyFlights}/>
         <Stack.Screen name="Origin" component={Origin}/>

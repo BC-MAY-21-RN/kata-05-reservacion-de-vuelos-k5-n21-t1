@@ -1,11 +1,28 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { InputTitle, Input } from '../Styled/generals';
+import { Container } from './styled';
 
 export const LoginForm = () => {
+
+    const handleEmail = () => {
+        
+    }
+
+    const handlePassword = () => {
+        
+    }
+
     return (
-        <View>
-            <Text>LoginForm</Text>
-        </View>
+        <Container>
+            <InputTitle>Email</InputTitle>
+            <Input 
+                onChangeText={handleEmail}
+            />
+            <InputTitle>Password</InputTitle>
+            <Input
+                onChangeText={handlePassword}
+            />
+        </Container>
     )
 }
 
