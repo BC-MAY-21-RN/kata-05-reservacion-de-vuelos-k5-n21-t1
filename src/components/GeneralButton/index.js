@@ -1,11 +1,10 @@
 import React from 'react'
-import {Text, View } from 'react-native'
+import { ButtonGeneral, TextGeneral } from './styled'
 
-export const GeneralButton = () => {
+export const GeneralButton = (props) => {
     return (
-        <View>
-            <Text>GeneralButton</Text>
-        </View>
+    <ButtonGeneral>
+        <TextGeneral>{props.text}</TextGeneral>
+    </ButtonGeneral>
     )
 }
-

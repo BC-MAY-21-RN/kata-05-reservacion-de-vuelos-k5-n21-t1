@@ -1,14 +1,17 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import { LoginForm } from '../components'
+import { LoginForm, GeneralButton } from '../components'
 import { PurpleText  } from '../components/Styled/generals'
+import { LoginContainer } from './styled'
 
 export const Login = () => {
+
     return (
-        <View>
+        <LoginContainer>
             <PurpleText>Login</PurpleText>
             <LoginForm />
-        </View>
+            <GeneralButton text={'Login'}/>
+        </LoginContainer>
     )
 }
 

@@ -1,13 +1,8 @@
 import styled from 'styled-components';
 
-
-export const Container = styled.View`
+export const LoginContainer = styled.View`
     align-items:center;
     display: flex;
     justify-content: space-between;
-    height: 200px;
-    margin-bottom: 30px;
-    width: 90%;
+    margin-left: 15px;
 `
-
-
