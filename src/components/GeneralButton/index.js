@@ -1,10 +1,10 @@
 import React from 'react'
 import { ButtonGeneral, TextGeneral } from './styled'
 
-export const GeneralButton = () => {
+export const GeneralButton = (props) => {
     return (
     <ButtonGeneral>
-        <TextGeneral>Next</TextGeneral>
+        <TextGeneral>{props.text}</TextGeneral>
     </ButtonGeneral>
     )
 }
