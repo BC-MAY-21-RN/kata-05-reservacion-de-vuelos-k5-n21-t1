@@ -1,8 +1,8 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Link } from '@react-navigation/native';
 import { LoginForm, GeneralButton } from '../components'
-import { PurpleText  } from '../components/Styled/generals'
-import { LoginContainer } from './styled'
+import { PurpleText, GrayText } from '../components/Styled/generals'
+import { LoginContainer, TextContainer } from './styled'
 
 export const Login = () => {
 
@@ -11,6 +11,12 @@ export const Login = () => {
             <PurpleText>Login</PurpleText>
             <LoginForm />
             <GeneralButton text={'Login'}/>
+            <TextContainer>          
+                <GrayText>Don't have an account? </GrayText>
+                <Link to ={{ screen: 'SignUp' }}>
+                    Sign Up
+                </Link>
+            </TextContainer>
         </LoginContainer>
     )
 }

@@ -22,3 +22,9 @@ export const PurpleText = styled.Text`
     margin-left: 15px;
     margin-top: 90px;
 `
+
+export const GrayText = styled.Text`
+    color: gray;
+    font-size: 18px;
+
+`
