@@ -11,14 +11,14 @@ const Navigate = () => {
           screenOptions = {{
             headerShown: false
           }}>
-        <Stack.Screen name="Login" component={Login}/>
-        <Stack.Screen name="SignUp" component={SignUp}/>
-        <Stack.Screen name="MyFlights" component={MyFlights}/>
-        <Stack.Screen name="Origin" component={Origin}/>
-        <Stack.Screen name="Destination" component={Destination}/>
-        <Stack.Screen name="Date" component={Date}/>
-        <Stack.Screen name="Passengers" component={Passengers}/>
-        <Stack.Screen name="FinalDetails" component={FinalDetails}/>
+        <Stack.Screen name='Login' component={Login}/>
+        <Stack.Screen name='SignUp' component={SignUp}/>
+        <Stack.Screen name='MyFlights' component={MyFlights}/>
+        <Stack.Screen name='Origin' component={Origin}/>
+        <Stack.Screen name='Destination' component={Destination}/>
+        <Stack.Screen name='Date' component={Date}/>
+        <Stack.Screen name='Passengers' component={Passengers}/>
+        <Stack.Screen name='FinalDetails' component={FinalDetails}/>
       </Stack.Navigator>
   );
 }
