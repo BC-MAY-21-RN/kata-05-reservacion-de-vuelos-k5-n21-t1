@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import { Block,Block1, Block2, Block3, Block4, Titulo, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, RegisterButton, TextButton, SignUpButton, GoogleIcon, LoginText } from './styled';
+import { Block,Block1, Block2, Block3, Block4, Titulo, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, RegisterButton, TextButton, SignUpButton, GoogleIcon, LoginText, TextAlert } from './styled';
 
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Text } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
+import { InputHook } from './InputHook';
 
 
 
@@ -16,7 +17,20 @@ export const SignUpForm = () => {
     //CheckBoxes
     const [terms, setTerms] = useState(false);
     const [subscribe, setSubscribe] = useState(false);
-
+    
+    //onBlur y onFocus de inputs
+    const {
+        iname,
+        iEmail,
+        iPassword,
+        handleiNameFocus,
+        handleIEmailFocus,
+        handleIpasswordFocus,
+        handleINameBlur,
+        handleIEmailBlur,
+        handleIPasswordBlur
+    } = InputHook();
+    
     //Imgs
     const view = require('./imgs/view.png');
     const hidden = require('./imgs/hidden.png');
@@ -26,6 +40,7 @@ export const SignUpForm = () => {
         entry: true,
         icon: view,
     });
+    
 
     //Change icon on password
     const onIconChange = ()=>{
@@ -43,20 +58,42 @@ export const SignUpForm = () => {
                 <Titulo>Sign Up</Titulo>
             </Block1>
             <Block2>
-                <InputText>First Name</InputText>
+                <InputText>
+                    First Name 
+                    {(name.trim().length > 2) ? '' : <TextAlert>  please insert your first name</TextAlert>
+                    }
+                </InputText>
+                
                 <Input
                     onChangeText={onChangeName}
                     value={name}
+                    onFocus={handleiNameFocus}
+                    onBlur={handleINameBlur}
+                    style={{borderColor: (iname)?'blue':'black'}}
                 />
 
-                <InputText>Email *</InputText>
+                <InputText>
+                    Email *
+                    {(email.trim().length > 4) ? ''  : <TextAlert>  please insert a valid email</TextAlert>
+                    }
+                </InputText>
                 <Input
                     onChangeText={onChangeEmail}
                     value={email}
+                    onFocus={handleIEmailFocus}
+                    onBlur={handleIEmailBlur}
+                    style={{borderColor: (iEmail)?'blue':'black'}}
                 />
 
-                <InputText>Password</InputText>
-                <PasswordView>
+                <InputText>
+                    Password
+                    {(password.trim().length >= 8) ? ''  : <TextAlert>  password must be 8 or more characters</TextAlert>
+                    }
+                </InputText>
+                <PasswordView 
+                    onFocus={handleIpasswordFocus}
+                    onBlur={handleIPasswordBlur}
+                    style={{borderColor: (iPassword)?'blue':'black'}}>
                     <InputPassword
                         onChangeText={onChangePassword}
                         value={password}
@@ -76,6 +113,7 @@ export const SignUpForm = () => {
                         disabled={false}
                         value={terms}
                         onValueChange={(newValue) => setTerms(newValue)}
+                        tintColors={{ true: '#007EFF', false: '#CACACA' }}
                     />
                     <CheckBoxText>I agree to the Terms and Privacy Policy.</CheckBoxText>
                 </CheckBoxView>
@@ -84,6 +122,7 @@ export const SignUpForm = () => {
                         disabled={false}
                         value={subscribe}
                         onValueChange={(newValue) => setSubscribe(newValue)}
+                        tintColors={{ true: '#007EFF', false: '#CACACA' }}
                     />
                     <CheckBoxText>Subscribe for select product updates.</CheckBoxText>
                 </CheckBoxView>
@@ -91,7 +130,7 @@ export const SignUpForm = () => {
             </Block3>
             <Block4>
                 <SignUpButton>
-                    <RegisterButton>
+                    <RegisterButton style={{backgroundColor:'gray'}}>
                         <TextButton>Sign Up</TextButton>
                     </RegisterButton>
                 </SignUpButton>

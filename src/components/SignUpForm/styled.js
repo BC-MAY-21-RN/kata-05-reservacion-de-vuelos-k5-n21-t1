@@ -106,3 +106,8 @@ export const LoginText = styled.Text`
     textAlign: center;
     marginTop: 20px;
 `
+
+export const TextAlert = styled.Text`
+    font-size: 14px;
+    color: red;
+`
