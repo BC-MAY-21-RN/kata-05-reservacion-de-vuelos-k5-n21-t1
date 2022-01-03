@@ -111,3 +111,7 @@ export const TextAlert = styled.Text`
     font-size: 14px;
     color: red;
 `
+export const LinkStyle = styled.Text`
+    color: blue;
+    text-decoration: underline
+`

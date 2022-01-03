@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import { Block,Block1, Block2, Block3, Block4, Titulo, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, RegisterButton, TextButton, SignUpButton, GoogleIcon, LoginText, TextAlert } from './styled';
+import { Block,Block1, Block2, Block3, Block4, Titulo, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, RegisterButton, TextButton, SignUpButton, GoogleIcon, LoginText, TextAlert, LinkStyle } from './styled';
 
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import { InputHook } from './InputHook';
+import { Link } from '@react-navigation/native';
 
 
 
@@ -141,7 +142,9 @@ export const SignUpForm = () => {
                         <TextButton>Sign Up with Google</TextButton>
                     </RegisterButton>
                 </SignUpButton>
-                <LoginText>Already have an account? Log In</LoginText>
+                <LoginText>Already have an account? 
+                    <Link to ={{ screen: 'MyFlights' }} > <LinkStyle> Log In </LinkStyle> </Link>
+                </LoginText>
             </Block4>
         </Block>
     )

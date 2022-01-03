@@ -18,3 +18,47 @@ export const PurpleText = styled.Text`
     font-size: 24px;
     font-weight: bold;
 `;
+
+export const GlobalBlock = styled.View`
+    position:absolute;
+    bottom: 15px;
+    height: 65px;
+    alignItems: center;
+    alignSelf: center;
+    padding: 10px;
+`
+
+export const MyFlightsBlock = styled.View`
+    display: flex;
+    margin: 30px 0 20px 30px; 
+`
+
+export const MyFlightsTitle = styled.Text`
+    color: #5974F5;
+    font-size: 40px;
+    font-weight: bold;
+`
+export const Flights = styled.View`
+    display: flex;
+    margin: 20px;
+`
+// export const GlobalBlock = styled.View`
+//     flex:1;
+//     display:flex;
+//     flex-direction: column;
+// `
+
+// export const MyFlightsBlock = styled.View`
+//     display: flex;
+//     margin: 30px 0 20px 30px; 
+// `
+
+// export const MyFlightsTitle = styled.Text`
+//     color: #5974F5;
+//     font-size: 40px;
+//     font-weight: bold;
+// `
+// export const Flights = styled.View`
+//     display: flex;
+//     margin: 20px;
+// `

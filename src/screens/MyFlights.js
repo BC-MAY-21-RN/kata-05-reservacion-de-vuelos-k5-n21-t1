@@ -1,11 +1,26 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { AddButton } from '../components/AddButton'
+import { Flights, MyFlightsTitle, MyFlightsBlock, GlobalBlock } from '../components/Styled/generals'
 
 export const MyFlights = () => {
     return (
-        <View>
-            <Text>MyFlights</Text>
-        </View>
+        <GlobalBlock>
+
+            <MyFlightsBlock>
+
+                <MyFlightsTitle>MyFlights</MyFlightsTitle>
+
+                <Flights>
+
+                    <MyFlightsTitle>Hola</MyFlightsTitle>
+                    
+                </Flights>
+
+            </MyFlightsBlock>
+
+            <AddButton/>
+
+        </GlobalBlock>
     )
 }
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { AddImage, AddImageBlock } from './styled'
 
 export const AddButton = () => {
     return (
-        <View>
-            <Text>AddButton</Text>
-        </View>
+        <AddImageBlock>
+            <AddImage source={require('./imgs/circulo-plus.png')}/>
+        </AddImageBlock>
     )
 }
