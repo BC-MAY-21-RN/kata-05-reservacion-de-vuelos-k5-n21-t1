@@ -5,6 +5,7 @@ export const LoginContainer = styled.View`
     display: flex;
     justify-content: space-between;
     margin-left: 15px;
+    margin-top: 60px;
 `
 
 export const TextContainer = styled.View`

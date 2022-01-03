@@ -1,11 +1,14 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { FlightDetails } from '../components'
+import { PurpleText } from '../components/Styled/generals'
 
 export const MyFlights = () => {
     return (
-        <View>
-            <Text>MyFlights</Text>
-        </View>
+        <>
+            <PurpleText>My flights</PurpleText>
+            <FlightDetails />
+            
+        </>
     )
 }
 
