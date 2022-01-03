@@ -6,7 +6,14 @@ export const MyFlights = () => {
     return (
         <>
             <PurpleText>My flights</PurpleText>
-            <FlightDetails />
+            <FlightDetails 
+                OriginCity={"BEG"}
+                OriginCountry={"Serbia"}
+                DestinationCity={"AMS"}
+                DestinationCountry={"Netherlands"}
+                Date={"september 3, 2020"}
+                Passengers={"2 passengers"}
+            />
             
         </>
     )

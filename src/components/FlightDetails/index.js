@@ -10,18 +10,18 @@ export const FlightDetails = (props) => {
             <DetailsContainer>
                 <TopContainer> 
                     <BoxLeft>
-                        <City>BEG</City>
-                        <Country>Serbia</Country>
+                        <City>{props.OriginCity}</City>
+                        <Country>{props.OriginCountry}</Country>
                     </BoxLeft>
                     <PlaneImg source={estrella} />
                     <BoxRight>
-                        <City>AMS</City>
-                        <Country>Netherlands</Country>
+                        <City>{props.DestinationCity}</City>
+                        <Country>{props.DestinationCountry}</Country>
                     </BoxRight>
                 </TopContainer>
                 <BottomContainer>
-                    <Detail>September 3, 2020</Detail>
-                    <Detail>2 passengers</Detail>
+                    <Detail>{props.Date}</Detail>
+                    <Detail>{props.Passengers}</Detail>
                 </BottomContainer>
             </DetailsContainer>
 
