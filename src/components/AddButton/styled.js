@@ -5,10 +5,14 @@ export const AddImage = styled.Image`
     width: 80px;
 `
 
-export const AddImageBlock = styled.View`
+export const AddImageBlock = styled.TouchableOpacity`
     display: flex;  
-    flex: 1;
     alignItems: center;
     justify-content: flex-end;
-    margin-bottom: 50px;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    bottom: 50px;
+    alignSelf: center;
+    
 `

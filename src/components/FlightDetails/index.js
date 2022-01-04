@@ -1,5 +1,5 @@
 import React from 'react'
-import estrella from '../../library/images'
+import {Plane} from '../../library/images'
 import { DetailsContainer, TopContainer, PlaneImg, BoxLeft, BoxRight, City, Country, BottomContainer, Detail } from './styled'
 import { Container } from '../Styled/generals'
 
@@ -13,7 +13,7 @@ export const FlightDetails = (props) => {
                         <City>{props.OriginCity}</City>
                         <Country>{props.OriginCountry}</Country>
                     </BoxLeft>
-                    <PlaneImg source={estrella} />
+                    <PlaneImg source={Plane} />
                     <BoxRight>
                         <City>{props.DestinationCity}</City>
                         <Country>{props.DestinationCountry}</Country>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlightDetails } from '../components'
+import { FlightDetails, AddButton } from '../components'
 import { PurpleText } from '../components/Styled/generals'
 
 export const MyFlights = () => {
@@ -15,8 +15,11 @@ export const MyFlights = () => {
                 Passengers={"2 passengers"}
             />
             
+            <AddButton/>
         </>
     )
 }
+
+
 
 

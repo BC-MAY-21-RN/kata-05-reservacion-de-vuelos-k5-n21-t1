@@ -27,9 +27,8 @@ export const BoxRight = styled.View`
 `
 
 export const PlaneImg = styled.Image`
-    border: 2px;
-    height: 60px;
-    width: 60px;
+    height: 30px;
+    width: 30px;
 `
 
 export const City = styled.Text`
