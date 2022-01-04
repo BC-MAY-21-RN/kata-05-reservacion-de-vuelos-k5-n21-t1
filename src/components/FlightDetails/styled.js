@@ -15,13 +15,7 @@ export const TopContainer = styled.View`
     justify-content: space-between;
 `
 
-export const BoxLeft = styled.View`
-    height: 70px;
-    width: 150px;
-`
-
-export const BoxRight = styled.View`
-    align-items: flex-end;
+export const Box = styled.View`
     height: 70px;
     width: 150px;
 `
@@ -47,7 +41,6 @@ export const BottomContainer = styled.View`
     border-top-width: 1px; 
     flex-direction: row;
     justify-content: space-between;
-    margin-top:0px;
 `
 
 export const Detail = styled.Text`
