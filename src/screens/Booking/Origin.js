@@ -1,10 +1,16 @@
 import React from 'react'
-import {Text, View } from 'react-native'
+import {BoldText, GeneralButton} from '../../components'
+import { Divider } from 'react-native-elements/dist/divider/Divider'
+import { ContainerCenter, InputLocation } from '../../components/Styled/generals'
 
 export const Origin = () => {
     return (
-        <View>
-            <Text>Origin</Text>
-        </View>
+        <ContainerCenter>
+            <BoldText text={'Where are you now?'}/>
+            <InputLocation placeholder="Select location"/>
+            <Divider orientation="vertical" width={9}/>
+            <GeneralButton text={'Next'}/>
+        </ContainerCenter>
     )
 }
+

@@ -1,11 +1,23 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { ContainerCenter } from '../../components/Styled/generals'
+import { FlightDetails, GeneralButton, BoldText } from '../../components'
 
 export const FinalDetails = () => {
     return (
-        <View>
-            <Text>Login</Text>
-        </View>
+        <>
+            <FlightDetails 
+                    OriginCity={"BEG"}
+                    OriginCountry={"Serbia"}
+                    DestinationCity={"AMS"}
+                    DestinationCountry={"Netherlands"}
+                    Date={"september 3, 2020"}
+                    Passengers={"2 passengers"}
+            />
+            <ContainerCenter>
+                <BoldText text={'Your request was recived'}/>
+                <GeneralButton text={'Finish'}/>
+            </ContainerCenter>
+        </>
     )
 }
 
