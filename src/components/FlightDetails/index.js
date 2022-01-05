@@ -1,6 +1,6 @@
 import React from 'react'
 import {Plane} from '../../library/images'
-import { DetailsContainer, TopContainer, PlaneImg, BoxLeft, BoxRight, City, Country, BottomContainer, Detail } from './styled'
+import { DetailsContainer, TopContainer, PlaneImg, City, Country, BottomContainer, Detail, Box } from './styled'
 import { Container } from '../Styled/generals'
 
 export const FlightDetails = (props) => {
@@ -9,15 +9,15 @@ export const FlightDetails = (props) => {
 
             <DetailsContainer>
                 <TopContainer> 
-                    <BoxLeft>
+                    <Box>
                         <City>{props.OriginCity}</City>
                         <Country>{props.OriginCountry}</Country>
-                    </BoxLeft>
+                    </Box>
                     <PlaneImg source={Plane} />
-                    <BoxRight>
+                    <Box style={{alignItems: 'flex-end'}}>
                         <City>{props.DestinationCity}</City>
                         <Country>{props.DestinationCountry}</Country>
-                    </BoxRight>
+                    </Box>
                 </TopContainer>
                 <BottomContainer>
                     <Detail>{props.Date}</Detail>
