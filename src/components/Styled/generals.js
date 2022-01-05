@@ -63,11 +63,6 @@ export const Flights = styled.View`
 //     display: flex;
 //     margin: 20px;
 // `
-export const TextContainer = styled.View`
-    margin-bottom: 60px;
-    margin-left: 15px;
-    margin-top: 90px;
-`;
 
 export const GrayText = styled.Text`
     color: gray;
@@ -87,10 +82,15 @@ export const Container = styled.View`
 `;
 
 export const InputLocation = styled(Input)`
+    border-bottom-color: gray;
+    border-bottom-width: 1px;
+    border-color: #EEEEEE;
+    margin-top: 60px;
     width: 80%;
 `;
 export const ContainerCenter = styled.View`
     display: flex;
     flex: 1;
     align-items: center;
+    justify-content: center;
 `;

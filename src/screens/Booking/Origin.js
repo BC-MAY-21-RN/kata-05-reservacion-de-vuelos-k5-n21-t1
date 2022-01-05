@@ -5,12 +5,13 @@ import { ContainerCenter, InputLocation } from '../../components/Styled/generals
 
 export const Origin = () => {
     return (
-        <ContainerCenter>
-            <BoldText text={'Where are you now?'}/>
-            <InputLocation placeholder="Select location"/>
-            <Divider orientation="vertical" width={9}/>
+        <>
+            <ContainerCenter>
+                <BoldText text={'Where are you now?'}/>
+                <InputLocation placeholder="Select location"/>
+            </ContainerCenter>
             <GeneralButton text={'Next'}/>
-        </ContainerCenter>
+        </>      
     )
 }
 
