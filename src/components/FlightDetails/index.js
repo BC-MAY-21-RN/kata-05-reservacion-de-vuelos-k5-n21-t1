@@ -7,7 +7,9 @@ export const FlightDetails = (props) => {
     return (
         <Container>
 
-            <DetailsContainer>
+            <DetailsContainer
+                noBorder={props.noBorder}
+            >
                 <TopContainer> 
                     <Box>
                         <City>{props.OriginCity}</City>

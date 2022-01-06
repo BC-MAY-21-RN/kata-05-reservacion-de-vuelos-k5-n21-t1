@@ -90,7 +90,12 @@ export const InputLocation = styled(Input)`
 `;
 export const ContainerCenter = styled.View`
     display: flex;
-    flex: 1;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 `;
+
+export const ContainerTop = styled.View`
+    height: 100%;
+    padding-top: 30px;
+`
