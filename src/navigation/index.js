@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator();
 const Navigate = () => {
   return (
       <Stack.Navigator 
-          initialRouteName='Passengers'
+          initialRouteName='FinalDetails'
           screenOptions = {{
             headerShown: false
           }}>

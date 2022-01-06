@@ -7,5 +7,6 @@ export const TextBold = styled.Text`
 `;
 
 export const TextContainer = styled.View`
-    width: 80%;
+    margin-top: 5px;
+    width: 85%;
 `
