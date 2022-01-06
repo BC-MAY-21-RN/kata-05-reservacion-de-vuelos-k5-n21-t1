@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import { TextBold } from './styled'
+import { TextBold, TextContainer } from './styled'
 
 export const BoldText = (props) => {
     return (
-        <View>
+        <TextContainer>
             <TextBold>{props.text}</TextBold>
-        </View>
+        </TextContainer>
     )
 }
 

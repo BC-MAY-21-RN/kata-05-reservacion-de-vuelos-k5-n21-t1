@@ -1,8 +1,8 @@
 import styled  from "styled-components";
 
 export const DetailsContainer = styled.View`
-    border-bottom-color: black;
-    border-bottom-width: 1.5px;
+    border-bottom-color: linear-gradient(black, white);
+    border-bottom-width: ${(props) => props.noBorder ? '0px': '1.5px'}};
     display: flex;
     flex-direction: column;
     margin-top: 40px;
@@ -21,6 +21,7 @@ export const Box = styled.View`
 `
 
 export const PlaneImg = styled.Image`
+    align-self: center;
     height: 30px;
     width: 30px;
 `

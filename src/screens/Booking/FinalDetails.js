@@ -1,22 +1,26 @@
 import React from 'react'
-import { ContainerCenter } from '../../components/Styled/generals'
 import { FlightDetails, GeneralButton, BoldText } from '../../components'
+import { ContainerCenter } from '../../components/Styled/generals'
 
 export const FinalDetails = () => {
     return (
         <>
-            <FlightDetails 
-                    OriginCity={"BEG"}
-                    OriginCountry={"Serbia"}
-                    DestinationCity={"AMS"}
-                    DestinationCountry={"Netherlands"}
-                    Date={"september 3, 2020"}
-                    Passengers={"2 passengers"}
-            />
-            <ContainerCenter>
-                <BoldText text={'Your request was recived'}/>
-                <GeneralButton text={'Finish'}/>
+            <ContainerCenter
+                style={{ marginTop: 250 }}
+            >
+                <FlightDetails 
+                        OriginCity={"BEG"}
+                        OriginCountry={"Serbia"}
+                        DestinationCity={"AMS"}
+                        DestinationCountry={"Netherlands"}
+                        Date={"september 3, 2020"}
+                        Passengers={"2 passengers"}
+                        noBorder
+                />
+                <BoldText 
+                    text={'Your request was received.'}/>
             </ContainerCenter>
+            <GeneralButton text={'Finish'}/>
         </>
     )
 }

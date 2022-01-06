@@ -1,21 +1,23 @@
 import React from 'react'
 import { BoldText, GeneralButton, CalendarDate, FlightDetails } from '../../components'
-import { ContainerCenter } from '../../components/Styled/generals'
-import {View} from 'react-native'
+import { ContainerCenter, ContainerTop } from '../../components/Styled/generals'
 
 export const Date = () => {
     return (
-        <ContainerCenter>
+        <ContainerTop>
             <FlightDetails
                 OriginCity={"BEG"}
                 OriginCountry={"Serbia"}
                 DestinationCity={"AMS"}
                 DestinationCountry={"Netherlands"}
+                noBorder
             />
-            <BoldText text={'Select Date'}/>
-            <CalendarDate/>
+            <ContainerCenter>
+                <BoldText text={'Select date'}/>
+                <CalendarDate/>
+            </ContainerCenter>
             <GeneralButton text={'Next'}/>
-        </ContainerCenter>
+        </ContainerTop>
     )
 }
 
