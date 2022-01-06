@@ -39,9 +39,15 @@ export const CalendarDate = () => {
                     width: 340
                 }}
                 theme={{
-                    textDayFontSize: 20,
+                    arrowColor: '#5b6df7',
+                    textDayFontSize: 16,
                     textMonthFontSize: 24,
-                    textMonthFontWeight: 'bold'
+                    textMonthFontWeight: 'bold',
+                    textDayFontWeight: 'bold',
+                    todayTextColor: 'black',
+                }}
+                onDayPress={day => {
+                    console.log('selected day', day);
                 }}
                 // Initially visible month. Default = now
                 current={today}

@@ -1,11 +1,10 @@
 import React from 'react'
 import { BoldText, GeneralButton, CalendarDate, FlightDetails } from '../../components'
-import { ContainerCenter } from '../../components/Styled/generals'
-import {View} from 'react-native'
+import { ContainerCenter, ContainerTop } from '../../components/Styled/generals'
 
 export const Date = () => {
     return (
-        <>
+        <ContainerTop>
             <FlightDetails
                 OriginCity={"BEG"}
                 OriginCountry={"Serbia"}
@@ -14,11 +13,11 @@ export const Date = () => {
                 noBorder
             />
             <ContainerCenter>
-                <BoldText text={'Select Date'}/>
+                <BoldText text={'Select date'}/>
                 <CalendarDate/>
             </ContainerCenter>
             <GeneralButton text={'Next'}/>
-        </>
+        </ContainerTop>
     )
 }
 
