@@ -5,17 +5,20 @@ import {View} from 'react-native'
 
 export const Date = () => {
     return (
-        <ContainerCenter>
+        <>
             <FlightDetails
                 OriginCity={"BEG"}
                 OriginCountry={"Serbia"}
                 DestinationCity={"AMS"}
                 DestinationCountry={"Netherlands"}
+                noBorder
             />
-            <BoldText text={'Select Date'}/>
-            <CalendarDate/>
+            <ContainerCenter>
+                <BoldText text={'Select Date'}/>
+                <CalendarDate/>
+            </ContainerCenter>
             <GeneralButton text={'Next'}/>
-        </ContainerCenter>
+        </>
     )
 }
 
