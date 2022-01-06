@@ -10,7 +10,8 @@ export const Login = () => {
         <LoginContainer>
             <PurpleText>Login</PurpleText>
             <LoginForm />
-            <GeneralButton text={'Login'}/>
+            <GeneralButton 
+                text={'Login'}/>
             <TextContainer>          
                 <GrayText>Don't have an account? </GrayText>
                 <Link to ={{ screen: 'SignUp' }}>
