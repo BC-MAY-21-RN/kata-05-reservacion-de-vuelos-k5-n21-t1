@@ -21,6 +21,7 @@ export const Box = styled.View`
 `
 
 export const PlaneImg = styled.Image`
+    align-self: center;
     height: 30px;
     width: 30px;
 `
