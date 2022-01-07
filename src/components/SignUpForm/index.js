@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import { Block,Block1, Block2, Block3, Block4, Titulo, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, RegisterButton, TextButton, SignUpButton, GoogleIcon, LoginText, TextAlert, LinkStyle } from './styled';
-
-import { TouchableOpacity} from 'react-native';
+import { Block,Block1, Block2, Block3, Block4, Titulo, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, RegisterButton, TextButton, SignUpButton, GoogleIcon, LoginText, TextAlert, ButtonContainer } from './styled';
+import { TouchableOpacity, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import { InputHook } from './InputHook';
 import { Link } from '@react-navigation/native';
+import { ContainerTop, GrayText, LinkStyle, PurpleText } from '../Styled/generals';
+import { GeneralButton } from '..';
 
 
 
@@ -54,15 +55,13 @@ export const SignUpForm = () => {
     }
 
     return (
-        <Block>
+        <ContainerTop style = {{ width: 360, alignSelf: 'center'}}>
             <Block1>
-                <Titulo>Sign Up</Titulo>
+                <PurpleText>Sign Up</PurpleText>
             </Block1>
             <Block2>
-                <InputText>
+                <InputText style={{ marginTop: 40 }}>
                     First Name 
-                    {(name.trim().length > 2) ? '' : <TextAlert>  please insert your first name</TextAlert>
-                    }
                 </InputText>
                 
                 <Input
@@ -75,7 +74,7 @@ export const SignUpForm = () => {
 
                 <InputText>
                     Email *
-                    {(email.trim().length > 4) ? ''  : <TextAlert>  please insert a valid email</TextAlert>
+                    {(email.trim().length > 4) ? ''  : <TextAlert> Email in use. Use a different email</TextAlert>
                     }
                 </InputText>
                 <Input
@@ -88,7 +87,7 @@ export const SignUpForm = () => {
 
                 <InputText>
                     Password
-                    {(password.trim().length >= 8) ? ''  : <TextAlert>  password must be 8 or more characters</TextAlert>
+                    {(password.trim().length >= 8) ? ''  : <TextAlert> Incorrect email and/or password</TextAlert>
                     }
                 </InputText>
                 <PasswordView 
@@ -129,24 +128,26 @@ export const SignUpForm = () => {
                 </CheckBoxView>
                 
             </Block3>
-            <Block4>
-                <SignUpButton>
-                    <RegisterButton style={{backgroundColor:'gray'}}>
-                        <TextButton>Sign Up</TextButton>
-                    </RegisterButton>
-                </SignUpButton>
+            <View>
+                <ButtonContainer>
+                    <GeneralButton 
+                        text={'Sign Up'} 
+                        style={{ position: 'relative'}}
+                        />
+                </ButtonContainer>
                 <CheckBoxText>Or</CheckBoxText>
-                <SignUpButton>
-                    <GoogleIcon source={require('./imgs/google.png')}/>
-                    <RegisterButton>
-                        <TextButton>Sign Up with Google</TextButton>
-                    </RegisterButton>
-                </SignUpButton>
-                <LoginText>Already have an account? 
-                    <Link to ={{ screen: 'MyFlights' }} > <LinkStyle> Log In </LinkStyle> </Link>
-                </LoginText>
-            </Block4>
-        </Block>
+                <GoogleIcon source={require('./imgs/google.png')}/>
+                <ButtonContainer>
+                    <GeneralButton 
+                    text={'Sign Up with Google'}
+                    style={{ position: 'relative'}}
+                    />
+                </ButtonContainer>
+                <GrayText>Already have an account? 
+                    <Link to ={{ screen: 'Login' }} > <LinkStyle> Log In </LinkStyle> </Link>
+                </GrayText>
+            </View>
+        </ContainerTop>
     )
 }
 

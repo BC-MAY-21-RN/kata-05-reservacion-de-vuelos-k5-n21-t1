@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator, HeaderBackButton } from '@react-navigation/native-stack';
 import { Date, Destination, FinalDetails, Origin, Passengers, Login, MyFlights, SignUp} from '../screens'
 
 const Stack = createNativeStackNavigator();
@@ -8,9 +8,10 @@ const Navigate = () => {
   return (
       <Stack.Navigator 
           initialRouteName='Origin'
-          screenOptions = {{
+          screenOptions={{
             headerShown: false
-          }}>
+          }}
+          >
         <Stack.Screen name='Login' component={Login}/>
         <Stack.Screen name='SignUp' component={SignUp}/>
         <Stack.Screen name='MyFlights' component={MyFlights}/>

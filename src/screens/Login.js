@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from '@react-navigation/native';
 import { LoginForm, GeneralButton } from '../components'
-import { PurpleText, GrayText } from '../components/Styled/generals'
+import { PurpleText, GrayText, LinkStyle } from '../components/Styled/generals'
 import { LoginContainer, TextContainer } from './styled'
 
 export const Login = () => {
@@ -15,7 +15,7 @@ export const Login = () => {
             <TextContainer>          
                 <GrayText>Don't have an account? </GrayText>
                 <Link to ={{ screen: 'SignUp' }}>
-                    Sign Up
+                    <LinkStyle>Sign Up</LinkStyle> 
                 </Link>
             </TextContainer>
         </LoginContainer>

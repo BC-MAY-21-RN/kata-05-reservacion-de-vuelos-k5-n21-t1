@@ -16,3 +16,9 @@ export const TextContainer = styled.View`
     margin-top: 30px;
     width: 100%
 `
+
+export const BorderBottom = styled.View`
+    background-color: linear-gradient(to right, #000033, #FFFFFF, #000000);
+    height: 2px;
+    width: 80%
+`

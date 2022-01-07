@@ -53,7 +53,7 @@ export const CalendarDate = () => {
                 current={today}
                 // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
                 minDate={today}
-                
+                markingType={'custom'}
             />
         </CalendarContainer>
     )

@@ -1,10 +1,13 @@
 import React from 'react'
-import { ButtonGeneral, TextGeneral } from './styled'
+
+import { ButtonGeneral, TextGeneral ,ContainerButton} from './styled'
 
 export const GeneralButton = (props) => {
     return (
-    <ButtonGeneral>
-        <TextGeneral>{props.text}</TextGeneral>
-    </ButtonGeneral>
+        <ContainerButton>
+            <ButtonGeneral>
+                <TextGeneral>{props.text}</TextGeneral>
+            </ButtonGeneral>
+        </ContainerButton>
     )
 }

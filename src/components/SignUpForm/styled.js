@@ -1,20 +1,16 @@
 //COMIENZA LO MIO -- HUGO
 import styled from 'styled-components';
 
-export const Titulo = styled.Text`
-    color: #5974F5;
-    font-size: 24px;
-    font-weight: bold;
-`
 export const InputText = styled.Text`
     font-size: 18px;
-    font-weight: bold;
     marginTop: 20px;
+    Color: #b6b7ba;
 `
 export const Instructions = styled.Text`
+    color:gray;     
     font-size: 14px;
     font-weight: bold;  
-    color:gray; 
+    margin-top: 10px;
 `
 
 export const Block = styled.View`
@@ -36,17 +32,21 @@ export const Block3 = styled.View`
     display: flex;
 `
 export const Block4 = styled.View`
+    border: 2px solid black;
+    height: 180px;
     display: flex;
     margin: 30px;
 `
 export const PasswordView = styled.View`
     flex-direction: row;
     borderWidth: 1px;
+    margin-top: 10px;
     alignItems: center;
 `
 export const Input = styled.TextInput`
     height: 40px;
     borderWidth: 1px;
+    margin-top: 10px;
     padding: 10px;
 `
 export const InputPassword = styled.TextInput`
@@ -111,7 +111,7 @@ export const TextAlert = styled.Text`
     font-size: 14px;
     color: red;
 `
-export const LinkStyle = styled.Text`
-    color: blue;
-    text-decoration: underline
+
+export const ButtonContainer = styled.View`
+position:relative
 `

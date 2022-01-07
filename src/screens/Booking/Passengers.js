@@ -1,12 +1,11 @@
 import React from 'react'
-import {View} from 'react-native'
-import { Divider } from 'react-native-elements';
-import { BoldText, GeneralButton, PickerPassengers, FlightDetails } from '../../components'
+import { BoldText, GeneralButton, PickerPassengers, FlightDetails, ArrowButton } from '../../components'
 import { ContainerCenter, ContainerTop } from '../../components/Styled/generals';
 
 export const Passengers = () => {
     return (
     <ContainerTop>
+        <ArrowButton />
         <FlightDetails 
                 OriginCity={"BEG"}
                 OriginCountry={"Serbia"}
