@@ -2,9 +2,9 @@ import React from 'react'
 
 import { ButtonGeneral, TextGeneral ,ContainerButton} from './styled'
 
-export const GeneralButton = ({height,text}) => {
+export const GeneralButton = ({className,text}) => {
     return (
-        <ContainerButton height={height}>
+        <ContainerButton className={className}>
             <ButtonGeneral>
                 <TextGeneral>{text}</TextGeneral>
             </ButtonGeneral>

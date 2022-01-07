@@ -7,7 +7,7 @@ const Stack = createNativeStackNavigator();
 const Navigate = () => {
   return (
       <Stack.Navigator 
-          initialRouteName='FinalDetails'
+          initialRouteName='Origin'
           screenOptions={{
             headerShown: false
           }}
@@ -18,8 +18,8 @@ const Navigate = () => {
         <Stack.Screen name='Origin' component={Origin}/>
         <Stack.Screen name='Destination' component={Destination}/>
         <Stack.Screen name='Date' component={Date}/>
-        <Stack.Screen name='FinalDetails' component={FinalDetails}/>
         <Stack.Screen name='Passengers' component={Passengers}/>
+        <Stack.Screen name='FinalDetails' component={FinalDetails}/>
       </Stack.Navigator>
   );
 }

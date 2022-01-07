@@ -1,15 +1,12 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import {FlightDetails, GeneralButton, BoldText} from '../../components';
+import {GeneralButtonStyle} from '../../components/Oringin/styled';
 import {ContainerCenter} from '../../components/Styled/generals';
 
 export const FinalDetails = () => {
   return (
     <>
-    <SafeAreaView/>
-
-    
-      <ContainerCenter>
+      <ContainerCenter style={{marginTop: 250}}>
         <FlightDetails
           OriginCity={'BEG'}
           OriginCountry={'Serbia'}
@@ -21,7 +18,7 @@ export const FinalDetails = () => {
         />
         <BoldText text={'Your request was received.'} />
       </ContainerCenter>
-        <GeneralButton text="hello" height="10%" />
+      <GeneralButtonStyle />
     </>
   );
 };

@@ -14,6 +14,7 @@ export const TextGeneral = styled.Text`
   font-size: 18px;
 `;
 export const ContainerButton = styled.View`
+  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;

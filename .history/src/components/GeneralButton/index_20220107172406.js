@@ -2,11 +2,11 @@ import React from 'react'
 
 import { ButtonGeneral, TextGeneral ,ContainerButton} from './styled'
 
-export const GeneralButton = ({height,text}) => {
+export const GeneralButton = (props) => {
     return (
-        <ContainerButton height={height}>
+        <ContainerButton       className={props.className}>
             <ButtonGeneral>
-                <TextGeneral>{text}</TextGeneral>
+                <TextGeneral>{props.text}</TextGeneral>
             </ButtonGeneral>
         </ContainerButton>
     )
