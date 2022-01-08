@@ -1,6 +1,5 @@
 import React from 'react'
-import { InputTitle, Input } from '../Styled/generals';
-import { Container } from './styled';
+import { Container, Input, InputTitle } from './styled';
 
 export const LoginForm = () => {
 

@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from '@react-navigation/native';
-import { LoginForm, GeneralButton } from '../components'
-import { PurpleText, GrayText, LinkStyle } from '../components/Styled/generals'
+import { LoginForm, GeneralButton, PurpleText } from '../components'
+import { GrayText, LinkStyle } from '../components/Styled/generals'
 import { LoginContainer, TextContainer } from './styled'
 
 export const Login = () => {
 
     return (
         <LoginContainer>
-            <PurpleText>Login</PurpleText>
+            <PurpleText
+                text={'Login'}
+            />
             <LoginForm />
             <GeneralButton 
                 text={'Login'}/>

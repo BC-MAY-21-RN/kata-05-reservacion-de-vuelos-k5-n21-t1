@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import { Block,Block1, Block2, Block3, Block4, Titulo, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, RegisterButton, TextButton, SignUpButton, GoogleIcon, LoginText, TextAlert, ButtonContainer } from './styled';
-import { TouchableOpacity, View} from 'react-native';
+import { Block2, Block3, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, TextAlert, ButtonContainer, FooterContainer, CheckboxContainer, SignUpContainer } from './styled';
+import { SafeAreaView, TouchableOpacity, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import { InputHook } from './InputHook';
 import { Link } from '@react-navigation/native';
-import { ContainerTop, GrayText, LinkStyle, PurpleText } from '../Styled/generals';
-import { GeneralButton } from '..';
+import { ContainerTop, GrayText, LinkStyle } from '../Styled/generals';
+import { GeneralButton, GoogleButton, PurpleText } from '..';
 
 
 
@@ -55,10 +55,11 @@ export const SignUpForm = () => {
     }
 
     return (
-        <ContainerTop style = {{ width: 360, alignSelf: 'center'}}>
-            <Block1>
-                <PurpleText>Sign Up</PurpleText>
-            </Block1>
+        <SignUpContainer >
+            <SafeAreaView />
+            <PurpleText 
+                text={'Sign Up'}
+            />
             <Block2>
                 <InputText style={{ marginTop: 40 }}>
                     First Name 
@@ -107,7 +108,7 @@ export const SignUpForm = () => {
                 
                 
             </Block2>
-            <Block3>
+            <CheckboxContainer>
                 <CheckBoxView>
                     <CheckBox
                         disabled={false}
@@ -127,27 +128,25 @@ export const SignUpForm = () => {
                     <CheckBoxText>Subscribe for select product updates.</CheckBoxText>
                 </CheckBoxView>
                 
-            </Block3>
+            </CheckboxContainer>
             <View>
                 <ButtonContainer>
                     <GeneralButton 
                         text={'Sign Up'} 
                         style={{ position: 'relative'}}
                         />
-                </ButtonContainer>
-                <CheckBoxText>Or</CheckBoxText>
-                <GoogleIcon source={require('./imgs/google.png')}/>
-                <ButtonContainer>
-                    <GeneralButton 
-                    text={'Sign Up with Google'}
-                    style={{ position: 'relative'}}
+                    <CheckBoxText>Or</CheckBoxText>
+                    <GoogleButton 
+                        text={'Sign Up with Google'}
                     />
                 </ButtonContainer>
-                <GrayText>Already have an account? 
-                    <Link to ={{ screen: 'Login' }} > <LinkStyle> Log In </LinkStyle> </Link>
-                </GrayText>
+                <FooterContainer> 
+                    <GrayText>Already have an account? 
+                        <Link to ={{ screen: 'Login' }} > <LinkStyle> Log In </LinkStyle> </Link>
+                    </GrayText>
+                </FooterContainer>
             </View>
-        </ContainerTop>
+        </SignUpContainer>
     )
 }
 

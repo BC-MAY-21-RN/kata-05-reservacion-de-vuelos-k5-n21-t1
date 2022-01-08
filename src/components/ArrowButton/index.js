@@ -1,16 +1,16 @@
 import React from "react";
 import { Arrow } from "../../library/images";
-import { ArrowContainer, ArrowImg } from "./styled";
+import { ArrowContainer, ArrowImg, ContainerArrow } from "./styled";
 
 export const ArrowButton = (props) => {
     const { navigation } = props;
     return (
-        <ArrowContainer
+        <ContainerArrow
             onPress={() => {
                 navigation.goBack();
             }}
         >
             <ArrowImg source={ Arrow }/>
-        </ArrowContainer>
+        </ContainerArrow>
     )
 }

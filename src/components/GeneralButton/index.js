@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { ButtonGeneral, TextGeneral ,ContainerButton} from './styled'
 
 export const GeneralButton = ({height,text}) => {

@@ -2,8 +2,6 @@ import React from 'react';
 import {SafeAreaView} from 'react-native';
 import {ArrowButton, BoldText, GeneralButton} from '../../components';
 import {
-  ContainerArrow,
-  ContainerButton,
   ContainerCenter,
   ContainerTop,
   InputLocation,
@@ -14,9 +12,7 @@ export const Origin = () => {
     <>
       <SafeAreaView />
       <ContainerTop>
-        <ContainerArrow>
-          <ArrowButton />
-        </ContainerArrow>
+        <ArrowButton />
         <ContainerCenter>
           <BoldText text={'Where are you now?'} />
           <InputLocation placeholder="Select location" />

@@ -1,10 +1,7 @@
-import styled from "styled-components";
+import styled from "styled-components"; 
 
-export const ArrowContainer = styled.TouchableOpacity`
-    left: 20px;
-    height: 40px;
-    margin-bottom: 20px;
-    width: 40px;
+export const ContainerArrow = styled.View`
+    height:5%;
 `
 
 export const ArrowImg = styled.Image`
