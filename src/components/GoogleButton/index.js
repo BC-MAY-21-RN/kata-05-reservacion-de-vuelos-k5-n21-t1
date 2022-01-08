@@ -3,12 +3,14 @@ import { ButtonGeneral, ContainerButton, TextGeneral } from "../GeneralButton/st
 import { Google } from "../../library/images";
 import { GoogleIcon } from "./styled";
 
-export const GoogleButton = ({height, text}) =>{
+export const GoogleButton = (props) =>{
     return (
-        <ContainerButton height={height}>
-            <ButtonGeneral>
+        <ContainerButton height={props.height}>
+            <ButtonGeneral
+                disabled={props.disabled}
+            >
                 <GoogleIcon source={Google}/>
-                <TextGeneral>{text}</TextGeneral>
+                <TextGeneral>{props.text}</TextGeneral>
             </ButtonGeneral>
         </ContainerButton>
     )

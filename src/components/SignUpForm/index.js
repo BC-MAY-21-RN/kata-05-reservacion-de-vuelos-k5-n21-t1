@@ -134,10 +134,12 @@ export const SignUpForm = () => {
                     <GeneralButton 
                         text={'Sign Up'} 
                         style={{ position: 'relative'}}
+                        disabled
                         />
                     <CheckBoxText>Or</CheckBoxText>
                     <GoogleButton 
                         text={'Sign Up with Google'}
+                        disabled
                     />
                 </ButtonContainer>
                 <FooterContainer> 

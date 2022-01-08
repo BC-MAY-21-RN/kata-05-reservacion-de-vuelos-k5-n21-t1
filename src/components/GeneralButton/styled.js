@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ButtonGeneral = styled.TouchableOpacity`
   align-items: center;
   width: 100%;
-  background-color:  ${(disabled) => disabled ? 'gray' : '#5b6df7'};
+  background-color:  ${(props) => props.disabled ? 'gray' : '#5b6df7'};
   border-radius: 10px;
   flex-direction: row;
   justify-content: space-around;
