@@ -11,6 +11,14 @@ import { GeneralButton, GoogleButton, PurpleText } from '..';
 
 export const SignUpForm = () => {
 
+    const [disable, setDisable] = useState(true)
+
+    const handleName = text => {
+        if(text.length >= 1){
+            setDisable(false);
+        }
+    }
+
     //Inputs
     const [name, onChangeName] = useState("");
     const [email, onChangeEmail] = useState("");
@@ -66,7 +74,7 @@ export const SignUpForm = () => {
                 </InputText>
                 
                 <Input
-                    onChangeText={onChangeName}
+                    onChangeText={handleName}
                     value={name}
                     onFocus={handleiNameFocus}
                     onBlur={handleINameBlur}
@@ -134,7 +142,7 @@ export const SignUpForm = () => {
                     <GeneralButton 
                         text={'Sign Up'} 
                         style={{ position: 'relative'}}
-                        disabled
+                        disabled={disable}
                         />
                     <CheckBoxText>Or</CheckBoxText>
                     <GoogleButton 

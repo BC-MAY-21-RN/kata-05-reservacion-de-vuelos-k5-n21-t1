@@ -26,7 +26,6 @@ export const LoginForm = (props) => {
             
                 <InputTitle>Email</InputTitle>
                 <Input 
-                    editable={true}
                     onChangeText={handleEmail}
                 />
                 <InputTitle>Password</InputTitle>
