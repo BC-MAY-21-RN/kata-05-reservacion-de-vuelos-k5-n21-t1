@@ -16,6 +16,7 @@ export const TextGeneral = styled.Text`
   font-size: 18px;
 `;
 export const ContainerButton = styled.View`
+  align-self: center;
   display: flex;
   align-items: center;
   height: ${({height}) => height ?? '45px'};
