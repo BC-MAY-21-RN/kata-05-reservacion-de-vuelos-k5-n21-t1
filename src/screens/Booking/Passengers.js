@@ -7,6 +7,7 @@ import {
   ArrowButton,
 } from '../../components';
 import {ContainerCenter, ContainerTop} from '../../components/Styled/generals';
+import { ButtonPassenger, PickerContainer } from '../styled';
 
 export const Passengers = () => {
   return (
@@ -20,11 +21,14 @@ export const Passengers = () => {
         Date={'september 3, 2020'}
         noBorder
       />
-      <ContainerCenter>
+      <PickerContainer>
         <BoldText text={'How many passengers?'} />
-      </ContainerCenter>
+      </PickerContainer>
       <PickerPassengers />
-      <GeneralButton text={'Next'} />
+      <GeneralButton
+        style={{ marginTop: '60px'}}
+        height         
+        text={'Next'} />
     </ContainerTop>
   );
 };

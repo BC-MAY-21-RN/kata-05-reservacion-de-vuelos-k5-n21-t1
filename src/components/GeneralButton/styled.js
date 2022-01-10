@@ -18,7 +18,9 @@ export const TextGeneral = styled.Text`
 export const ContainerButton = styled.View`
   align-self: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: ${({height}) => height ?? '45px'};
+  height: ${({height}) => height ? "35%" : '45px'};
   width: 270px;
 `;
