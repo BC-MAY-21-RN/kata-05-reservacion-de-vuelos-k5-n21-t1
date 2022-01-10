@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const LoginContainer = styled.View`
+    align-self: center;
     display: flex;
     justify-content: space-between;
-    margin-left: 15px;
     margin-top: 60px;
 `
 

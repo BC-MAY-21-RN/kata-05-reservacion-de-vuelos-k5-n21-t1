@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BoldText,
   GeneralButton,
@@ -12,7 +12,18 @@ import {
 } from '../../components/Styled/generals';
 import {BorderBottom} from '../styled';
 
-export const Destination = () => {
+export const Destination = (props) => {
+
+  const { navigation } = props;
+
+  const [disable, setDisable] = useState(true)
+
+    const handleLocation = text => {
+        if(text.length >= 1){
+            setDisable(false);
+        }    
+    }
+
   return (
     <ContainerTop>
       <ArrowButton />
@@ -25,9 +36,16 @@ export const Destination = () => {
       <BorderBottom />
       <ContainerCenter>
         <BoldText text={'Where will you be flying to?'} />
-        <InputLocation placeholder="Select location" />
+        <InputLocation 
+          onChangeText={handleLocation}
+          placeholder="Select location" />
       </ContainerCenter>
-      <GeneralButton text={'Next'} />
+      <GeneralButton 
+        onPress={() => {
+          navigation.navigate('Date')
+        }}
+        disabled={disable}
+        text={'Next'} />
     </ContainerTop>
   );
 };

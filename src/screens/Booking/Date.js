@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BoldText,
   GeneralButton,
@@ -9,6 +9,12 @@ import {
 import {ContainerCenter, ContainerTop} from '../../components/Styled/generals';
 
 export const Date = () => {
+
+  const [disable, setDisable] = useState(true)
+  const [guardarFecha, setGuardarFecha] = useState({});
+
+  console.log(guardarFecha);
+
   return (
     <ContainerTop>
       <ArrowButton />
@@ -21,9 +27,14 @@ export const Date = () => {
       />
       <ContainerCenter>
         <BoldText text={'Select date'} />
-        <CalendarDate />
+        <CalendarDate 
+          setGuardarFecha = {setGuardarFecha}
+          setDisable = {setDisable}
+        />
       </ContainerCenter>
-      <GeneralButton text={'Next'} />
+      <GeneralButton 
+        disabled={disable}
+        text={'Next'} />
     </ContainerTop>
   );
 };

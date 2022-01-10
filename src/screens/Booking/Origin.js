@@ -11,11 +11,11 @@ export const Origin = () => {
 
   const [disable, setDisable] = useState(true)
 
-    const handleLocation = text => {
-        if(text.length >= 1){
-            setDisable(false);
-        }    
-    }
+  const handleLocation = text => {
+      if(text.length >= 1){
+        setDisable(false);
+      }    
+  }
 
   return (
     <>

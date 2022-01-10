@@ -67,7 +67,7 @@ export const ContainerCenter = styled.View`
     align-items: center;
     justify-content: flex-start ;
     margin-top: 10px;
-    height:70%;
+    height:60%;
 `;
 
 export const ContainerTop = styled.View`

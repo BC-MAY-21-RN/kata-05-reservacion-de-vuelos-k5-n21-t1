@@ -1,4 +1,4 @@
-import { Link } from '@react-navigation/native';
+import { Link, useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react'
 import { GeneralButton } from '..';
 import { GrayText, LinkStyle } from '../Styled/generals';
@@ -6,6 +6,7 @@ import { Container, Input, InputContainer, InputTitle, TextContainer } from './s
 
 export const LoginForm = (props) => {
 
+    const navigation = useNavigation();
     const [disable, setDisable] = useState(true)
 
     const handleEmail = text => {
@@ -36,6 +37,9 @@ export const LoginForm = (props) => {
             <GeneralButton 
                 text={'Login'}
                 disabled={disable}
+                onPress={() => {
+                    navigation.navigate('MyFlights')
+                }}
                 />
             <TextContainer>          
                 <GrayText>Don't have an account? </GrayText>
