@@ -1,24 +1,40 @@
-import React from 'react'
-import { BoldText, GeneralButton, CalendarDate, FlightDetails } from '../../components'
-import { ContainerCenter, ContainerTop } from '../../components/Styled/generals'
+import React, { useState } from 'react';
+import {
+  BoldText,
+  GeneralButton,
+  CalendarDate,
+  FlightDetails,
+  ArrowButton,
+} from '../../components';
+import {ContainerCenter, ContainerTop} from '../../components/Styled/generals';
 
 export const Date = () => {
-    return (
-        <ContainerTop>
-            <FlightDetails
-                OriginCity={"BEG"}
-                OriginCountry={"Serbia"}
-                DestinationCity={"AMS"}
-                DestinationCountry={"Netherlands"}
-                noBorder
-            />
-            <ContainerCenter>
-                <BoldText text={'Select date'}/>
-                <CalendarDate/>
-            </ContainerCenter>
-            <GeneralButton text={'Next'}/>
-        </ContainerTop>
-    )
-}
 
+  const [disable, setDisable] = useState(true)
+  const [guardarFecha, setGuardarFecha] = useState({});
 
+  console.log(guardarFecha);
+
+  return (
+    <ContainerTop>
+      <ArrowButton />
+      <FlightDetails
+        OriginCity={'BEG'}
+        OriginCountry={'Serbia'}
+        DestinationCity={'AMS'}
+        DestinationCountry={'Netherlands'}
+        noBorder
+      />
+      <ContainerCenter>
+        <BoldText text={'Select date'} />
+        <CalendarDate 
+          setGuardarFecha = {setGuardarFecha}
+          setDisable = {setDisable}
+        />
+      </ContainerCenter>
+      <GeneralButton 
+        disabled={disable}
+        text={'Next'} />
+    </ContainerTop>
+  );
+};

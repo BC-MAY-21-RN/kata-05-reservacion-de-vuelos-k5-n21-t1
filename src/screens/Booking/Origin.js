@@ -1,17 +1,39 @@
-import React from 'react'
-import {BoldText, GeneralButton} from '../../components'
-import { Divider } from 'react-native-elements/dist/divider/Divider'
-import { ContainerCenter, InputLocation } from '../../components/Styled/generals'
+import React, { useState } from 'react';
+import {SafeAreaView} from 'react-native';
+import {ArrowButton, BoldText, GeneralButton} from '../../components';
+import {
+  ContainerCenter,
+  ContainerTop,
+  InputLocation,
+} from '../../components/Styled/generals';
 
 export const Origin = () => {
-    return (
-        <>
-            <ContainerCenter>
-                <BoldText text={'Where are you now?'}/>
-                <InputLocation placeholder="Select location"/>
-            </ContainerCenter>
-            <GeneralButton text={'Next'}/>
-        </>      
-    )
-}
 
+  const [disable, setDisable] = useState(true)
+
+  const handleLocation = text => {
+      if(text.length >= 1){
+        setDisable(false);
+      }    
+  }
+
+  return (
+    <>
+      <SafeAreaView />
+      <ContainerTop>
+        <ArrowButton />
+        <ContainerCenter>
+          <BoldText text={'Where are you now?'} />
+          <InputLocation 
+            placeholder="Select location" 
+            onChangeText={handleLocation}
+            />
+        </ContainerCenter>
+        <GeneralButton 
+          disabled={disable}
+          text="Next"
+        />
+      </ContainerTop>
+    </>
+  );
+};

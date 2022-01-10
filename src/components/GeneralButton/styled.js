@@ -1,19 +1,26 @@
 import styled from 'styled-components';
 
 export const ButtonGeneral = styled.TouchableOpacity`
-    width: 80%;
-    align-items: center;
-    background-color: #b6b7ba;
-    border-radius: 10px;
-    height: 45px;
-    padding: 10px;
-    position: absolute;
-    bottom: 50px;
-    align-self: center;
-    
+  align-items: center;
+  width: 100%;
+  background-color:  ${(props) => props.disabled ? 'gray' : '#5b6df7'};
+  border-radius: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 45px;
+  padding: 10px;
 `;
 
 export const TextGeneral = styled.Text`
-    color: #ffffff;
-    font-size: 18px;
+  color: #ffffff;
+  font-size: 18px;
+`;
+export const ContainerButton = styled.View`
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: ${({height}) => height ? "35%" : '45px'};
+  width: 270px;
 `;

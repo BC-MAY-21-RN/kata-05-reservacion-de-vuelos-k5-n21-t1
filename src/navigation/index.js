@@ -7,10 +7,11 @@ const Stack = createNativeStackNavigator();
 const Navigate = () => {
   return (
       <Stack.Navigator 
-          initialRouteName='MyFlights'
-          screenOptions = {{
+          initialRouteName='Passengers'
+          screenOptions={{
             headerShown: false
-          }}>
+          }}
+          >
         <Stack.Screen name='Login' component={Login}/>
         <Stack.Screen name='SignUp' component={SignUp}/>
         <Stack.Screen name='MyFlights' component={MyFlights}/>

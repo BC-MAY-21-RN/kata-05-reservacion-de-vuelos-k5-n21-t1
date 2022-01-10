@@ -1,25 +1,34 @@
-import React from 'react'
-import {View} from 'react-native'
-import { Divider } from 'react-native-elements';
-import { BoldText, GeneralButton, PickerPassengers, FlightDetails } from '../../components'
-import { ContainerCenter, ContainerTop } from '../../components/Styled/generals';
+import React from 'react';
+import {
+  BoldText,
+  GeneralButton,
+  PickerPassengers,
+  FlightDetails,
+  ArrowButton,
+} from '../../components';
+import {ContainerCenter, ContainerTop} from '../../components/Styled/generals';
+import { ButtonPassenger, PickerContainer } from '../styled';
 
 export const Passengers = () => {
-    return (
+  return (
     <ContainerTop>
-        <FlightDetails 
-                OriginCity={"BEG"}
-                OriginCountry={"Serbia"}
-                DestinationCity={"AMS"}
-                DestinationCountry={"Netherlands"}
-                Date={"september 3, 2020"}
-                noBorder
-        />
-        <ContainerCenter>
-            <BoldText text={'How many passengers?'}/>
-        </ContainerCenter>
-        <PickerPassengers/>
-        <GeneralButton text={'Next'}/>
+      <ArrowButton />
+      <FlightDetails
+        OriginCity={'BEG'}
+        OriginCountry={'Serbia'}
+        DestinationCity={'AMS'}
+        DestinationCountry={'Netherlands'}
+        Date={'september 3, 2020'}
+        noBorder
+      />
+      <PickerContainer>
+        <BoldText text={'How many passengers?'} />
+      </PickerContainer>
+      <PickerPassengers />
+      <GeneralButton
+        style={{ marginTop: '60px'}}
+        height         
+        text={'Next'} />
     </ContainerTop>
-    )
-}
+  );
+};

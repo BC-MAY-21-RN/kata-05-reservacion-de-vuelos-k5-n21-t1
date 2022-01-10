@@ -1,20 +1,17 @@
 //COMIENZA LO MIO -- HUGO
 import styled from 'styled-components';
+import { ContainerTop } from '../Styled/generals';
 
-export const Titulo = styled.Text`
-    color: #5974F5;
-    font-size: 24px;
-    font-weight: bold;
-`
 export const InputText = styled.Text`
     font-size: 18px;
-    font-weight: bold;
     marginTop: 20px;
+    Color: #b6b7ba;
 `
 export const Instructions = styled.Text`
+    color:gray;     
     font-size: 14px;
     font-weight: bold;  
-    color:gray; 
+    margin-top: 10px;
 `
 
 export const Block = styled.View`
@@ -36,17 +33,21 @@ export const Block3 = styled.View`
     display: flex;
 `
 export const Block4 = styled.View`
+    border: 2px solid black;
+    height: 180px;
     display: flex;
     margin: 30px;
 `
 export const PasswordView = styled.View`
     flex-direction: row;
     borderWidth: 1px;
+    margin-top: 10px;
     alignItems: center;
 `
 export const Input = styled.TextInput`
     height: 40px;
     borderWidth: 1px;
+    margin-top: 10px;
     padding: 10px;
 `
 export const InputPassword = styled.TextInput`
@@ -63,19 +64,12 @@ export const Eye = styled.Image`
 export const CheckBoxView = styled.View`
     flex-direction: row;
     alignItems: center;
+    justify-content: space-between;
 `
 export const CheckBoxText = styled.Text`
     font-size: 18px;
     color:gray; 
     textAlign: center;
-    margin: 10px;
-`
-
-export const RegisterButton = styled.Pressable`
-    display: flex;
-    flex: 1;
-    height: 40px;
-    justify-content: center;
 `
 
 export const TextButton = styled.Text`
@@ -111,7 +105,26 @@ export const TextAlert = styled.Text`
     font-size: 14px;
     color: red;
 `
-export const LinkStyle = styled.Text`
-    color: blue;
-    text-decoration: underline
+
+export const ButtonContainer = styled.View`
+    align-items: center;
+    height: 40%;
+    justify-content: space-around;
+    padding: 20px;
+    width: 100%
+`
+
+export const FooterContainer = styled.View`
+    align-self: center;
+    justify-content: flex-end;
+    height: 20%;
+`
+
+export const CheckboxContainer = styled.View`
+    justify-content: space-between;
+    height: 8%;
+`
+
+export const SignUpContainer = styled(ContainerTop)`
+    padding: 20px;
 `

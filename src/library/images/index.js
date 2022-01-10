@@ -1,5 +1,11 @@
 import Plane from "./plane-purple.png"
+import Arrow from "./arrow-left.png"
+import Plus from "./circulo-plus.png"
+import Google from "./google.png"
 
 export {
-    Plane
-}
+    Arrow,
+    Plane,
+    Plus,
+    Google
+} 

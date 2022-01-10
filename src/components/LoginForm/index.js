@@ -1,27 +1,52 @@
-import React from 'react'
-import { InputTitle, Input } from '../Styled/generals';
-import { Container } from './styled';
+import { Link, useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react'
+import { GeneralButton } from '..';
+import { GrayText, LinkStyle } from '../Styled/generals';
+import { Container, Input, InputContainer, InputTitle, TextContainer } from './styled';
 
-export const LoginForm = () => {
+export const LoginForm = (props) => {
 
-    const handleEmail = () => {
-        
+    const navigation = useNavigation();
+    const [disable, setDisable] = useState(true)
+
+    const handleEmail = text => {
+        if(text.length >= 1){
+            setDisable(false);
+        }    
     }
 
-    const handlePassword = () => {
-        
+    const handlePassword = text => {
+        if(text.length >= 1){
+            setDisable(false);
+        } 
     }
 
     return (
         <Container>
-            <InputTitle>Email</InputTitle>
-            <Input 
-                onChangeText={handleEmail}
-            />
-            <InputTitle>Password</InputTitle>
-            <Input
-                onChangeText={handlePassword}
-            />
+            <InputContainer>
+            
+                <InputTitle>Email</InputTitle>
+                <Input 
+                    onChangeText={handleEmail}
+                />
+                <InputTitle>Password</InputTitle>
+                <Input
+                    onChangeText={handlePassword}
+                />
+            </InputContainer>
+            <GeneralButton 
+                text={'Login'}
+                disabled={disable}
+                onPress={() => {
+                    navigation.navigate('MyFlights')
+                }}
+                />
+            <TextContainer>          
+                <GrayText>Don't have an account? </GrayText>
+                <Link to ={{ screen: 'SignUp' }}>
+                    <LinkStyle>Sign Up</LinkStyle> 
+                </Link>
+            </TextContainer>
         </Container>
     )
 }

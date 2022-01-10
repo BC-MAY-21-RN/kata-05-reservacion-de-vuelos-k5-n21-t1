@@ -1,17 +1,22 @@
 import styled from 'styled-components';
+import { GeneralButton } from '../components';
+import { ContainerCenter } from '../components/Styled/generals';
 
 export const LoginContainer = styled.View`
-    align-items:center;
+    align-self: center;
     display: flex;
     justify-content: space-between;
-    margin-left: 15px;
     margin-top: 60px;
 `
 
-export const TextContainer = styled.View`
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    margin-top: 30px;
-    width: 100%
+
+export const BorderBottom = styled.View`
+    background-color: linear-gradient(to right, #000033, #FFFFFF, #000000);
+    height: 2px;
+    width: 80%
 `
+
+export const PickerContainer = styled(ContainerCenter)`
+    height: 15%
+`
+

@@ -6,3 +6,6 @@ export {GeneralButton} from './GeneralButton';
 export {LoginForm} from './LoginForm';
 export {PickerPassengers} from './PickerPassengers'
 export {SignUpForm} from './SignUpForm';
+export {ArrowButton} from './ArrowButton';
+export {PurpleText} from './PurpleText';
+export {GoogleButton} from './GoogleButton';

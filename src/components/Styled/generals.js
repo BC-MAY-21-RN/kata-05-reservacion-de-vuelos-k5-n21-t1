@@ -1,16 +1,7 @@
 import styled from 'styled-components';
+import { Input } from '../LoginForm/styled';
 
-export const InputTitle = styled.Text`
-    align-self: flex-start;
-    font-size: 18px;
-`;
 
-export const Input = styled.TextInput`
-    border: 1px solid #000000;
-    height: 50px;
-    font-size: 18px;
-    width: 340px;
-`;
 
 export const PurpleText = styled.Text`
     align-self : flex-start;
@@ -43,26 +34,6 @@ export const Flights = styled.View`
     display: flex;
     margin: 20px;
 `;
-// export const GlobalBlock = styled.View`
-//     flex:1;
-//     display:flex;
-//     flex-direction: column;
-// `
-
-// export const MyFlightsBlock = styled.View`
-//     display: flex;
-//     margin: 30px 0 20px 30px; 
-// `
-
-// export const MyFlightsTitle = styled.Text`
-//     color: #5974F5;
-//     font-size: 40px;
-//     font-weight: bold;
-// `
-// export const Flights = styled.View`
-//     display: flex;
-//     margin: 20px;
-// `
 
 export const GrayText = styled.Text`
     color: gray;
@@ -88,14 +59,24 @@ export const InputLocation = styled(Input)`
     margin-top: 60px;
     width: 80%;
 `;
+
+
 export const ContainerCenter = styled.View`
     display: flex;
+    flex-direction:column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start ;
     margin-top: 10px;
+    height:60%;
 `;
 
 export const ContainerTop = styled.View`
     height: 100%;
-    padding-top: 30px;
+
+`
+
+export const LinkStyle = styled.Text`
+    color: #5b6df7;
+    font-size: 16px;
+    text-decoration: underline
 `

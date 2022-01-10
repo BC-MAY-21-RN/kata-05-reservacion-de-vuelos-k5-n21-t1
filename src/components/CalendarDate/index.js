@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Calendar, LocaleConfig} from 'react-native-calendars';
 import { CalendarContainer } from './styled';
 
@@ -25,9 +25,7 @@ LocaleConfig.locales['en'] = {
   LocaleConfig.defaultLocale = 'en';
   
 
-export const CalendarDate = () => {
-
-
+export const CalendarDate = (props) => {
 
     let today = new Date().toLocaleDateString()
 
@@ -48,12 +46,14 @@ export const CalendarDate = () => {
                 }}
                 onDayPress={day => {
                     console.log('selected day', day);
+                    props.setGuardarFecha(day)
+                    props.setDisable(false)
                 }}
                 // Initially visible month. Default = now
                 current={today}
                 // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
                 minDate={today}
-                
+                markingType={'custom'}
             />
         </CalendarContainer>
     )

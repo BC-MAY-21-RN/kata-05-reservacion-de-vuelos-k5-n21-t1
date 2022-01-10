@@ -1,14 +1,23 @@
 import React, {useState} from 'react';
-import { Block,Block1, Block2, Block3, Block4, Titulo, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, RegisterButton, TextButton, SignUpButton, GoogleIcon, LoginText, TextAlert, LinkStyle } from './styled';
-
-import { TouchableOpacity} from 'react-native';
+import { Block2, Block3, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, TextAlert, ButtonContainer, FooterContainer, CheckboxContainer, SignUpContainer } from './styled';
+import { SafeAreaView, TouchableOpacity, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import { InputHook } from './InputHook';
 import { Link } from '@react-navigation/native';
+import { ContainerTop, GrayText, LinkStyle } from '../Styled/generals';
+import { GeneralButton, GoogleButton, PurpleText } from '..';
 
 
 
 export const SignUpForm = () => {
+
+    const [disable, setDisable] = useState(true)
+
+    const handleName = text => {
+        if(text.length >= 1){
+            setDisable(false);
+        }
+    }
 
     //Inputs
     const [name, onChangeName] = useState("");
@@ -54,19 +63,18 @@ export const SignUpForm = () => {
     }
 
     return (
-        <Block>
-            <Block1>
-                <Titulo>Sign Up</Titulo>
-            </Block1>
+        <SignUpContainer >
+            <SafeAreaView />
+            <PurpleText 
+                text={'Sign Up'}
+            />
             <Block2>
-                <InputText>
+                <InputText style={{ marginTop: 40 }}>
                     First Name 
-                    {(name.trim().length > 2) ? '' : <TextAlert>  please insert your first name</TextAlert>
-                    }
                 </InputText>
                 
                 <Input
-                    onChangeText={onChangeName}
+                    onChangeText={handleName}
                     value={name}
                     onFocus={handleiNameFocus}
                     onBlur={handleINameBlur}
@@ -75,7 +83,7 @@ export const SignUpForm = () => {
 
                 <InputText>
                     Email *
-                    {(email.trim().length > 4) ? ''  : <TextAlert>  please insert a valid email</TextAlert>
+                    {(email.trim().length > 4) ? ''  : <TextAlert> Email in use. Use a different email</TextAlert>
                     }
                 </InputText>
                 <Input
@@ -88,7 +96,7 @@ export const SignUpForm = () => {
 
                 <InputText>
                     Password
-                    {(password.trim().length >= 8) ? ''  : <TextAlert>  password must be 8 or more characters</TextAlert>
+                    {(password.trim().length >= 8) ? ''  : <TextAlert> Incorrect email and/or password</TextAlert>
                     }
                 </InputText>
                 <PasswordView 
@@ -108,7 +116,7 @@ export const SignUpForm = () => {
                 
                 
             </Block2>
-            <Block3>
+            <CheckboxContainer>
                 <CheckBoxView>
                     <CheckBox
                         disabled={false}
@@ -128,25 +136,27 @@ export const SignUpForm = () => {
                     <CheckBoxText>Subscribe for select product updates.</CheckBoxText>
                 </CheckBoxView>
                 
-            </Block3>
-            <Block4>
-                <SignUpButton>
-                    <RegisterButton style={{backgroundColor:'gray'}}>
-                        <TextButton>Sign Up</TextButton>
-                    </RegisterButton>
-                </SignUpButton>
-                <CheckBoxText>Or</CheckBoxText>
-                <SignUpButton>
-                    <GoogleIcon source={require('./imgs/google.png')}/>
-                    <RegisterButton>
-                        <TextButton>Sign Up with Google</TextButton>
-                    </RegisterButton>
-                </SignUpButton>
-                <LoginText>Already have an account? 
-                    <Link to ={{ screen: 'MyFlights' }} > <LinkStyle> Log In </LinkStyle> </Link>
-                </LoginText>
-            </Block4>
-        </Block>
+            </CheckboxContainer>
+            <View>
+                <ButtonContainer>
+                    <GeneralButton 
+                        text={'Sign Up'} 
+                        style={{ position: 'relative'}}
+                        disabled={disable}
+                        />
+                    <CheckBoxText>Or</CheckBoxText>
+                    <GoogleButton 
+                        text={'Sign Up with Google'}
+                        disabled
+                    />
+                </ButtonContainer>
+                <FooterContainer> 
+                    <GrayText>Already have an account? 
+                        <Link to ={{ screen: 'Login' }} > <LinkStyle> Log In </LinkStyle> </Link>
+                    </GrayText>
+                </FooterContainer>
+            </View>
+        </SignUpContainer>
     )
 }
 
