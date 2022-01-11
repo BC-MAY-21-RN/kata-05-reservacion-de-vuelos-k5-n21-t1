@@ -8,7 +8,7 @@ import {
 } from '../../components';
 import {ContainerCenter, ContainerTop} from '../../components/Styled/generals';
 
-export const Date = () => {
+export const Date = (props) => {
 
   const [disable, setDisable] = useState(true)
   const [guardarFecha, setGuardarFecha] = useState({});
@@ -34,7 +34,10 @@ export const Date = () => {
       </ContainerCenter>
       <GeneralButton 
         disabled={disable}
-        text={'Next'} />
+        text={'Next'} 
+        onPress={'Passengers'}
+        navigation={props.navigation}
+      />
     </ContainerTop>
   );
 };

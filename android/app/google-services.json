@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "92800743295",
+    "project_id": "rnflybooking",
+    "storage_bucket": "rnflybooking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92800743295:android:00d3007a43d53061534c4a",
+        "android_client_info": {
+          "package_name": "com.flybooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92800743295-6lm8qapobhgn6mg5hlje5op443ibcrnu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flybooking",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "92800743295-a9ndhjb4t8f3glso5kjk2idgj8tbpch7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOO3dwe8Tci3Yqv0V_3YoRs9P30LPQtg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92800743295-a9ndhjb4t8f3glso5kjk2idgj8tbpch7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

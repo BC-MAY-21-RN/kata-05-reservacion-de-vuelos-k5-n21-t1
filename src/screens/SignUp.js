@@ -2,9 +2,11 @@ import React from 'react'
 import { SignUpForm } from '../components'
 
 
-export const SignUp = () => {
+export const SignUp = (props) => {
     return (
-        <SignUpForm/>
+        <SignUpForm
+            navigation={props.navigation}
+        />
     )
 }
 

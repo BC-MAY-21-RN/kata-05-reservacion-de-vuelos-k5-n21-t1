@@ -9,7 +9,7 @@ import {
 import {ContainerCenter, ContainerTop} from '../../components/Styled/generals';
 import { ButtonPassenger, PickerContainer } from '../styled';
 
-export const Passengers = () => {
+export const Passengers = (props) => {
   return (
     <ContainerTop>
       <ArrowButton />
@@ -28,7 +28,10 @@ export const Passengers = () => {
       <GeneralButton
         style={{ marginTop: '60px'}}
         height         
-        text={'Next'} />
+        text={'Next'} 
+        onPress={'FinalDetails'}
+        navigation={props.navigation}
+        />
     </ContainerTop>
   );
 };

@@ -6,7 +6,6 @@ import { Container, Input, InputContainer, InputTitle, TextContainer } from './s
 
 export const LoginForm = (props) => {
 
-    const navigation = useNavigation();
     const [disable, setDisable] = useState(true)
 
     const handleEmail = text => {
@@ -37,9 +36,8 @@ export const LoginForm = (props) => {
             <GeneralButton 
                 text={'Login'}
                 disabled={disable}
-                onPress={() => {
-                    navigation.navigate('MyFlights')
-                }}
+                onPress={'SignUp'}
+                navigation={props.navigation}
                 />
             <TextContainer>          
                 <GrayText>Don't have an account? </GrayText>

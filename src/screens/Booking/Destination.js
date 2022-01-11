@@ -14,8 +14,6 @@ import {BorderBottom} from '../styled';
 
 export const Destination = (props) => {
 
-  const { navigation } = props;
-
   const [disable, setDisable] = useState(true)
 
     const handleLocation = text => {
@@ -41,11 +39,11 @@ export const Destination = (props) => {
           placeholder="Select location" />
       </ContainerCenter>
       <GeneralButton 
-        onPress={() => {
-          navigation.navigate('Date')
-        }}
+        onPress={'Date'}
         disabled={disable}
-        text={'Next'} />
+        text={'Next'} 
+        navigation={props.navigation}
+        />
     </ContainerTop>
   );
 };

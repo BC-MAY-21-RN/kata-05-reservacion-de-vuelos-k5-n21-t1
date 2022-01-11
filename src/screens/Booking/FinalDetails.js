@@ -3,7 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import {FlightDetails, GeneralButton, BoldText} from '../../components';
 import {ContainerCenter} from '../../components/Styled/generals';
 
-export const FinalDetails = () => {
+export const FinalDetails = (props) => {
   return (
     <>
     <SafeAreaView/>
@@ -21,7 +21,11 @@ export const FinalDetails = () => {
         />
         <BoldText text={'Your request was received.'} />
       </ContainerCenter>
-        <GeneralButton text="hello" height="10%" />
+        <GeneralButton 
+          text="Next"
+          onPress={'MyFlights'}
+          navigation={props.navigation}
+        />
     </>
   );
 };
