@@ -7,7 +7,7 @@ import {
   InputLocation,
 } from '../../components/Styled/generals';
 
-export const Origin = () => {
+export const Origin = (props) => {
 
   const [disable, setDisable] = useState(true)
 
@@ -32,6 +32,8 @@ export const Origin = () => {
         <GeneralButton 
           disabled={disable}
           text="Next"
+          onPress={'Destination'}
+          navigation={props.navigation}
         />
       </ContainerTop>
     </>

@@ -2,9 +2,12 @@ import React from 'react'
 import { Plus } from '../../library/images'
 import { AddImage, AddImageBlock } from './styled'
 
-export const AddButton = () => {
+export const AddButton = (props) => {
     return (
-        <AddImageBlock onPress={()=>{alert("Hola", "xd")}}>
+        <AddImageBlock 
+            onPress={() => {
+                props.navigation.navigate(props.onPress)
+            }}>
             <AddImage source={Plus}/>
         </AddImageBlock>
     )

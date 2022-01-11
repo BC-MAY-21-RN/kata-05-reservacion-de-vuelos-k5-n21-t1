@@ -2,14 +2,16 @@ import React from 'react'
 import { LoginForm, PurpleText } from '../components'
 import { LoginContainer } from './styled'
 
-export const Login = () => {
+export const Login = (props) => {
 
     return (
         <LoginContainer>
             <PurpleText
                 text={'Login'}
             />
-            <LoginForm />
+            <LoginForm 
+                navigation={props.navigation}
+            />
             
         </LoginContainer>
     )

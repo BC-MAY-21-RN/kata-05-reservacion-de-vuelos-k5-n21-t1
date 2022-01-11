@@ -9,7 +9,7 @@ import { GeneralButton, GoogleButton, PurpleText } from '..';
 
 
 
-export const SignUpForm = () => {
+export const SignUpForm = (props) => {
 
     const [disable, setDisable] = useState(true)
 
@@ -143,7 +143,9 @@ export const SignUpForm = () => {
                         text={'Sign Up'} 
                         style={{ position: 'relative'}}
                         disabled={disable}
-                        />
+                        onPress={'MyFlights'}
+                        navigation={props.navigation}
+                    />
                     <CheckBoxText>Or</CheckBoxText>
                     <GoogleButton 
                         text={'Sign Up with Google'}

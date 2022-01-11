@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native'
 import { FlightDetails, AddButton } from '../components'
 import { PurpleText } from '../components/Styled/generals'
 
-export const MyFlights = () => {
+export const MyFlights = (props) => {
     return (
         <>
             <ScrollView>
@@ -57,7 +57,10 @@ export const MyFlights = () => {
                     Passengers={"2 passengers"}
                 />
             </ScrollView>
-            <AddButton/>
+            <AddButton
+                onPress={'Origin'}
+                navigation={props.navigation}
+            />
         </>
     )
 }
