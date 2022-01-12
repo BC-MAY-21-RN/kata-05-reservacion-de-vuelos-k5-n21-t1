@@ -24,6 +24,7 @@ export const Input = styled.TextInput`
 `;
 
 export const TextContainer = styled.View`
+    align-self: center;
     justify-content: center;
     display: flex;
     flex-direction: row;

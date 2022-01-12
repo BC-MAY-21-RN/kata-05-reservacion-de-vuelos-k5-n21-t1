@@ -36,7 +36,7 @@ export const LoginForm = (props) => {
             <GeneralButton 
                 text={'Login'}
                 disabled={disable}
-                onPress={'SignUp'}
+                onPress={'MyFlights'}
                 navigation={props.navigation}
                 />
             <TextContainer>          
