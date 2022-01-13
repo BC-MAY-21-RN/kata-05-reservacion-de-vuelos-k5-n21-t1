@@ -17,8 +17,8 @@ export const PasswordInput = (props) => {
             entry: !secureTextEntry.entry,
             icon: (secureTextEntry.entry)?Hidden:Open,
         });
-
     }
+
     return(
         <PasswordView
         >

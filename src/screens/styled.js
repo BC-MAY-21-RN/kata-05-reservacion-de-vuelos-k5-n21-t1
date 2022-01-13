@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { GeneralButton } from '../components';
 import { ContainerCenter } from '../components/Styled/generals';
 
 export const LoginContainer = styled.View`

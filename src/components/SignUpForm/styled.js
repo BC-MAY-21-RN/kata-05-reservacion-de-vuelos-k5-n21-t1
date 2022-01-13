@@ -39,13 +39,6 @@ export const Block4 = styled.View`
     margin: 30px;
 `
 
-export const Input = styled.TextInput`
-    height: 40px;
-    borderWidth: 1px;
-    margin-top: 10px;
-    padding: 10px;
-`
-
 export const CheckBoxView = styled.View`
     flex-direction: row;
     alignItems: center;
