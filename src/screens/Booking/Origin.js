@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {SafeAreaView} from 'react-native';
 import {ArrowButton, BoldText, GeneralButton} from '../../components';
+import { PickerCountries } from '../../components/PickerCountries';
 import {
   ContainerCenter,
   ContainerTop,
@@ -9,26 +10,21 @@ import {
 
 export const Origin = (props) => {
 
-  const [disable, setDisable] = useState(true)
+  const [disable, setDisable] = useState(false)
 
-  const handleLocation = text => {
-      if(text.length >= 1){
-        setDisable(false);
-      }    
-  }
 
   return (
     <>
-      <SafeAreaView />
       <ContainerTop>
-        <ArrowButton />
+        <ArrowButton 
+          navigation={props.navigation}
+        />
         <ContainerCenter>
           <BoldText text={'Where are you now?'} />
-          <InputLocation 
-            placeholder="Select location" 
-            onChangeText={handleLocation}
-            />
+          <PickerCountries />
         </ContainerCenter>
+        <SafeAreaView/>
+        <SafeAreaView/>
         <GeneralButton 
           disabled={disable}
           text="Next"

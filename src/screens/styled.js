@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { GeneralButton } from '../components';
 import { ContainerCenter } from '../components/Styled/generals';
 
 export const LoginContainer = styled.View`
@@ -16,7 +15,7 @@ export const BorderBottom = styled.View`
     width: 80%
 `
 
-export const PickerContainer = styled(ContainerCenter)`
+export const PickerContainer = styled(ContainerCenter)` 
     height: 15%
 `
 

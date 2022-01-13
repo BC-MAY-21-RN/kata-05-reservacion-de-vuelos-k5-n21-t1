@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const PassengersContainer = styled.View`
+export const CountriesContainer = styled.View`
     flex-direction: column;
-    height: 30%;
+    height: 80%;
+    padding-top: 20%;
     width: 100%;
 `

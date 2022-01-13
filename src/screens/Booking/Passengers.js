@@ -6,13 +6,15 @@ import {
   FlightDetails,
   ArrowButton,
 } from '../../components';
-import {ContainerCenter, ContainerTop} from '../../components/Styled/generals';
-import { ButtonPassenger, PickerContainer } from '../styled';
+import {ContainerTop} from '../../components/Styled/generals';
+import {PickerContainer } from '../styled';
 
 export const Passengers = (props) => {
   return (
     <ContainerTop>
-      <ArrowButton />
+      <ArrowButton
+        navigation={props.navigation}
+       />
       <FlightDetails
         OriginCity={'BEG'}
         OriginCountry={'Serbia'}
@@ -26,9 +28,7 @@ export const Passengers = (props) => {
       </PickerContainer>
       <PickerPassengers />
       <GeneralButton
-        style={{ marginTop: '60px'}}
-        height         
-        text={'Next'} 
+        text={'Next'}
         onPress={'FinalDetails'}
         navigation={props.navigation}
         />

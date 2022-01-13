@@ -9,3 +9,4 @@ export {SignUpForm} from './SignUpForm';
 export {ArrowButton} from './ArrowButton';
 export {PurpleText} from './PurpleText';
 export {GoogleButton} from './GoogleButton';
+export {TextInput} from './TextInput';

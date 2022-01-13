@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   BoldText,
   GeneralButton,
   FlightDetails,
   ArrowButton,
 } from '../../components';
+import { PickerCountries } from '../../components/PickerCountries';
 import {
   InputLocation,
   ContainerCenter,
@@ -14,36 +16,33 @@ import {BorderBottom} from '../styled';
 
 export const Destination = (props) => {
 
-  const [disable, setDisable] = useState(true)
-
-    const handleLocation = text => {
-        if(text.length >= 1){
-            setDisable(false);
-        }    
-    }
+  const [disable, setDisable] = useState(false)
 
   return (
-    <ContainerTop>
-      <ArrowButton />
-      <FlightDetails
-        OriginCity={'BEG'}
-        OriginCountry={'Serbia'}
-        style={{alignSelf: 'flex-start'}}
-        noBorder
-      />
-      <BorderBottom />
-      <ContainerCenter>
-        <BoldText text={'Where will you be flying to?'} />
-        <InputLocation 
-          onChangeText={handleLocation}
-          placeholder="Select location" />
-      </ContainerCenter>
-      <GeneralButton 
-        onPress={'Date'}
-        disabled={disable}
-        text={'Next'} 
-        navigation={props.navigation}
-        />
-    </ContainerTop>
+    <>
+      <ContainerTop>
+        <ArrowButton 
+          navigation={props.navigation}
+          />
+        <FlightDetails
+          OriginCity={'BEG'}
+          OriginCountry={'Serbia'}
+          style={{alignSelf: 'flex-start'}}
+          noBorder
+          />
+        <BorderBottom />
+        <ContainerCenter>
+          <BoldText text={'Where will you be flying to?'} />
+          <PickerCountries />
+        </ContainerCenter>
+        <GeneralButton 
+          height
+          onPress={'Date'}
+          disabled={disable}
+          text={'Next'} 
+          navigation={props.navigation}
+          />
+      </ContainerTop>
+    </>
   );
 };

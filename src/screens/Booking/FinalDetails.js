@@ -7,9 +7,9 @@ export const FinalDetails = (props) => {
   return (
     <>
     <SafeAreaView/>
-
-    
+    <SafeAreaView/>
       <ContainerCenter>
+      <SafeAreaView/>
         <FlightDetails
           OriginCity={'BEG'}
           OriginCountry={'Serbia'}
@@ -18,10 +18,12 @@ export const FinalDetails = (props) => {
           Date={'september 3, 2020'}
           Passengers={'2 passengers'}
           noBorder
-        />
+          />
         <BoldText text={'Your request was received.'} />
       </ContainerCenter>
+        <SafeAreaView/>
         <GeneralButton 
+          height={'3%'}
           text="Next"
           onPress={'MyFlights'}
           navigation={props.navigation}

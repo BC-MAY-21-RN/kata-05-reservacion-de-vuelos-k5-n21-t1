@@ -16,14 +16,9 @@ export const InputTitle = styled.Text`
     font-size: 18px;
 `;
 
-export const Input = styled.TextInput`
-    border: 1px solid #000000;
-    height: 50px;
-    font-size: 18px;
-    width: 340px;
-`;
 
 export const TextContainer = styled.View`
+    align-self: center;
     justify-content: center;
     display: flex;
     flex-direction: row;
