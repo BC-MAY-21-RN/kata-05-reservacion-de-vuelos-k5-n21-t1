@@ -5,6 +5,7 @@ import {
   FlightDetails,
   ArrowButton,
 } from '../../components';
+import { PickerCountries } from '../../components/PickerCountries';
 import {
   InputLocation,
   ContainerCenter,
@@ -14,13 +15,7 @@ import {BorderBottom} from '../styled';
 
 export const Destination = (props) => {
 
-  const [disable, setDisable] = useState(true)
-
-    const handleLocation = text => {
-        if(text.length >= 1){
-            setDisable(false);
-        }    
-    }
+  const [disable, setDisable] = useState(false)
 
   return (
     <ContainerTop>
@@ -34,9 +29,7 @@ export const Destination = (props) => {
       <BorderBottom />
       <ContainerCenter>
         <BoldText text={'Where will you be flying to?'} />
-        <InputLocation 
-          onChangeText={handleLocation}
-          placeholder="Select location" />
+        <PickerCountries />
       </ContainerCenter>
       <GeneralButton 
         onPress={'Date'}

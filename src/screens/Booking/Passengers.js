@@ -6,8 +6,8 @@ import {
   FlightDetails,
   ArrowButton,
 } from '../../components';
-import {ContainerCenter, ContainerTop} from '../../components/Styled/generals';
-import { ButtonPassenger, PickerContainer } from '../styled';
+import {ContainerTop} from '../../components/Styled/generals';
+import {PickerContainer } from '../styled';
 
 export const Passengers = (props) => {
   return (

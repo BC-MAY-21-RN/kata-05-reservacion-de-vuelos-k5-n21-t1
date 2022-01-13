@@ -19,7 +19,7 @@ export const ContainerButton = styled.View`
   align-self: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: ${({height}) => height ? "35%" : '45px'};
   width: 270px;
