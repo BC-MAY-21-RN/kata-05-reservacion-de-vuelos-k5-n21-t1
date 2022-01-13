@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import { Block2, Block3, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, TextAlert, ButtonContainer, FooterContainer, CheckboxContainer, SignUpContainer } from './styled';
+import { Block2, Input, InputText, Instructions, InputPassword, PasswordView, Eye, CheckBoxView, CheckBoxText, TextAlert, ButtonContainer, FooterContainer, CheckboxContainer, SignUpContainer } from './styled';
 import { SafeAreaView, TouchableOpacity, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import { InputHook } from './InputHook';
 import { Link } from '@react-navigation/native';
-import { ContainerTop, GrayText, LinkStyle } from '../Styled/generals';
+import { GrayText, LinkStyle } from '../Styled/generals';
 import { GeneralButton, GoogleButton, PurpleText } from '..';
-
+import { PasswordInput } from '../PasswordInput';
 
 
 export const SignUpForm = (props) => {
@@ -42,22 +42,21 @@ export const SignUpForm = (props) => {
     } = InputHook();
     
     //Imgs
-    const view = require('./imgs/view.png');
-    const hidden = require('./imgs/hidden.png');
+    const Open = require('../../library/images/view.png')
+    const Hidden = require('../../library/images/hidden.png')
 
     //Pasword Input IMG
     const [secureTextEntry, onChangeSecureTextEntry] = useState({
         entry: true,
-        icon: view,
+        icon: Open,
     });
     
 
     //Change icon on password
     const onIconChange = ()=>{
-
         onChangeSecureTextEntry({
             entry: !secureTextEntry.entry,
-            icon: (secureTextEntry.entry)?hidden:view,
+            icon: (secureTextEntry.entry)?Hidden:Open,
         });
 
     }
@@ -99,19 +98,9 @@ export const SignUpForm = (props) => {
                     {(password.trim().length >= 8) ? ''  : <TextAlert> Incorrect email and/or password</TextAlert>
                     }
                 </InputText>
-                <PasswordView 
-                    onFocus={handleIpasswordFocus}
-                    onBlur={handleIPasswordBlur}
-                    style={{borderColor: (iPassword)?'blue':'black'}}>
-                    <InputPassword
-                        onChangeText={onChangePassword}
-                        value={password}
-                        secureTextEntry={secureTextEntry.entry}
-                    />
-                    <TouchableOpacity onPress={onIconChange}>
-                        <Eye source={secureTextEntry.icon}/>
-                    </TouchableOpacity>
-                </PasswordView>
+                <PasswordInput 
+                    
+                />
                 <Instructions>Use 8 or more characters with a mix of letters, numbers and symbols.</Instructions>
                 
                 

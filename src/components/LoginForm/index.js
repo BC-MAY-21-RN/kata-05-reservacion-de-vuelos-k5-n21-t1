@@ -1,23 +1,44 @@
-import { Link, useNavigation } from '@react-navigation/native';
+import { Link } from '@react-navigation/native';
 import React, { useState } from 'react'
 import { GeneralButton } from '..';
+import { PasswordInput } from '../PasswordInput';
 import { GrayText, LinkStyle } from '../Styled/generals';
 import { Container, Input, InputContainer, InputTitle, TextContainer } from './styled';
+
 
 export const LoginForm = (props) => {
 
     const [disable, setDisable] = useState(true)
+    const [email, setEmail] = useState(false)
 
     const handleEmail = text => {
         if(text.length >= 1){
-            setDisable(false);
+            setEmail(true);
         }    
     }
 
     const handlePassword = text => {
-        if(text.length >= 1){
+        if(text.length >= 1 && email == true){
             setDisable(false);
         } 
+    }
+
+    const Open = require('../../library/images/view.png')
+    const Hidden = require('../../library/images/hidden.png')
+
+    const [secureTextEntry, onChangeSecureTextEntry] = useState({
+        entry: true,
+        icon: Open,
+    });
+    
+
+    //Change icon on password
+    const onIconChange = () => {
+        onChangeSecureTextEntry({
+            entry: !secureTextEntry.entry,
+            icon: (secureTextEntry.entry) ? Hidden : Open,
+        });
+
     }
 
     return (
@@ -29,8 +50,8 @@ export const LoginForm = (props) => {
                     onChangeText={handleEmail}
                 />
                 <InputTitle>Password</InputTitle>
-                <Input
-                    onChangeText={handlePassword}
+                <PasswordInput 
+                    handlePassword={handlePassword}
                 />
             </InputContainer>
             <GeneralButton 
