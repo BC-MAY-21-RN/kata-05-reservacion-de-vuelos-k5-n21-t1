@@ -15,13 +15,16 @@ export const Origin = (props) => {
 
   return (
     <>
-      <SafeAreaView />
       <ContainerTop>
-        <ArrowButton />
+        <ArrowButton 
+          navigation={props.navigation}
+        />
         <ContainerCenter>
           <BoldText text={'Where are you now?'} />
           <PickerCountries />
         </ContainerCenter>
+        <SafeAreaView/>
+        <SafeAreaView/>
         <GeneralButton 
           disabled={disable}
           text="Next"

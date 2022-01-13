@@ -17,7 +17,9 @@ export const Date = (props) => {
 
   return (
     <ContainerTop>
-      <ArrowButton />
+      <ArrowButton 
+        navigation={props.navigation}
+      />
       <FlightDetails
         OriginCity={'BEG'}
         OriginCountry={'Serbia'}
@@ -33,6 +35,7 @@ export const Date = (props) => {
         />
       </ContainerCenter>
       <GeneralButton 
+        height
         disabled={disable}
         text={'Next'} 
         onPress={'Passengers'}

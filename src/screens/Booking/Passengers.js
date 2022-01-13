@@ -12,7 +12,9 @@ import {PickerContainer } from '../styled';
 export const Passengers = (props) => {
   return (
     <ContainerTop>
-      <ArrowButton />
+      <ArrowButton
+        navigation={props.navigation}
+       />
       <FlightDetails
         OriginCity={'BEG'}
         OriginCountry={'Serbia'}
@@ -26,9 +28,7 @@ export const Passengers = (props) => {
       </PickerContainer>
       <PickerPassengers />
       <GeneralButton
-        style={{ marginTop: '60px'}}
-        height         
-        text={'Next'} 
+        text={'Next'}
         onPress={'FinalDetails'}
         navigation={props.navigation}
         />
