@@ -3,6 +3,8 @@ import { Block2, Input, InputText, Instructions, CheckBoxView, CheckBoxText, Tex
 import { SafeAreaView, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import { Link } from '@react-navigation/native';
+import { ContainerTop, GrayText, LinkStyle } from '../Styled/generals';
+import { GeneralButton, GoogleButton, PurpleText } from '..';
 import { GrayText, LinkStyle } from '../Styled/generals';
 import { GeneralButton, GoogleButton, PurpleText, TextInput } from '..';
 import { PasswordInput } from '../PasswordInput';
@@ -31,6 +33,8 @@ export const SignUpForm = (props) => {
             setDisable(false);
         }
     }
+
+
 
     return (
         <SignUpContainer >
@@ -88,7 +92,6 @@ export const SignUpForm = (props) => {
                     <CheckBoxText>Or</CheckBoxText>
                     <GoogleButton 
                         text={'Sign Up with Google'}
-                        disabled
                     />
                 </ButtonContainer>
                 <FooterContainer> 

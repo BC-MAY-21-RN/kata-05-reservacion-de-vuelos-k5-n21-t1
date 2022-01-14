@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "92800743295-6lm8qapobhgn6mg5hlje5op443ibcrnu.apps.googleusercontent.com",
+          "client_id": "92800743295-alqi73rubl78u2dbv9n5d88ipo6ull9h.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.flybooking",
-            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+            "certificate_hash": "c13971337139dc200c95f9b53fe7c0e55cf5868a"
           }
         },
         {
@@ -37,6 +37,13 @@
             {
               "client_id": "92800743295-a9ndhjb4t8f3glso5kjk2idgj8tbpch7.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "92800743295-g6pjqa16vka8i83g8natgv97028t2hlk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.FlyBooking"
+              }
             }
           ]
         }
