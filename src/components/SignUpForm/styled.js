@@ -38,34 +38,13 @@ export const Block4 = styled.View`
     display: flex;
     margin: 30px;
 `
-export const PasswordView = styled.View`
-    flex-direction: row;
-    borderWidth: 1px;
-    margin-top: 10px;
-    alignItems: center;
-`
-export const Input = styled.TextInput`
-    height: 40px;
-    borderWidth: 1px;
-    margin-top: 10px;
-    padding: 10px;
-`
-export const InputPassword = styled.TextInput`
-    height: 40px;
-    padding: 10px;
-    flex: 1;
-`
 
-export const Eye = styled.Image`
-    width: 30px;
-    height: 30px;
-    marginRight: 10px;
-`
 export const CheckBoxView = styled.View`
     flex-direction: row;
     alignItems: center;
     justify-content: space-between;
 `
+
 export const CheckBoxText = styled.Text`
     font-size: 18px;
     color:gray; 

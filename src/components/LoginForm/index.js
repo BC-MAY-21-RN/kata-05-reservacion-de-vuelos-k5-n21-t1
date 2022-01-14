@@ -1,8 +1,12 @@
-import { Link, useNavigation } from '@react-navigation/native';
+import { Link } from '@react-navigation/native';
 import React, { useState } from 'react'
-import { GeneralButton } from '..';
+import { GeneralButton, TextInput } from '..';
+import { PasswordInput } from '../PasswordInput';
 import { GrayText, LinkStyle } from '../Styled/generals';
-import { Container, Input, InputContainer, InputTitle, TextContainer } from './styled';
+import { Container, InputContainer, InputTitle, TextContainer } from './styled';
+const Open = require('../../library/images/view.png')
+const Hidden = require('../../library/images/hidden.png')
+
 
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
@@ -16,15 +20,11 @@ GoogleSignin.configure({
 export const LoginForm = (props) => {
 
     const [disable, setDisable] = useState(true)
+    const [email, setEmail] = useState(false)
 
-    const handleEmail = text => {
-        if(text.length >= 1){
-            setDisable(false);
-        }    
-    }
 
     const handlePassword = text => {
-        if(text.length >= 1){
+        if(text.length >= 1 && email == true){
             setDisable(false);
         } 
     }
@@ -71,12 +71,12 @@ export const LoginForm = (props) => {
             <InputContainer>
             
                 <InputTitle>Email</InputTitle>
-                <Input 
-                    onChangeText={handleEmail}
+                <TextInput 
+                    setTextState={setEmail}
                 />
                 <InputTitle>Password</InputTitle>
-                <Input
-                    onChangeText={handlePassword}
+                <PasswordInput 
+                    handlePassword={handlePassword}
                 />
             </InputContainer>
             <GeneralButton 

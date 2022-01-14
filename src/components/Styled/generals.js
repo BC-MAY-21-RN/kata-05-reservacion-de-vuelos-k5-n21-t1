@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Input } from '../LoginForm/styled';
 
 
 
@@ -50,14 +49,6 @@ export const Container = styled.View`
     align-items: center;
     display: flex;
     width: 100%
-`;
-
-export const InputLocation = styled(Input)`
-    border-bottom-color: gray;
-    border-bottom-width: 1px;
-    border-color: #EEEEEE;
-    margin-top: 60px;
-    width: 80%;
 `;
 
 
