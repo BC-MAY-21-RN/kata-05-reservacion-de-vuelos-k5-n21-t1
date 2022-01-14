@@ -7,8 +7,6 @@ import { Link } from '@react-navigation/native';
 import { ContainerTop, GrayText, LinkStyle } from '../Styled/generals';
 import { GeneralButton, GoogleButton, PurpleText } from '..';
 
-
-
 export const SignUpForm = (props) => {
 
     const [disable, setDisable] = useState(true)
@@ -61,6 +59,8 @@ export const SignUpForm = (props) => {
         });
 
     }
+
+
 
     return (
         <SignUpContainer >
@@ -149,7 +149,6 @@ export const SignUpForm = (props) => {
                     <CheckBoxText>Or</CheckBoxText>
                     <GoogleButton 
                         text={'Sign Up with Google'}
-                        disabled
                     />
                 </ButtonContainer>
                 <FooterContainer> 
