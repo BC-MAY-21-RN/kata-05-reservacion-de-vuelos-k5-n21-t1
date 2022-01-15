@@ -12,3 +12,4 @@ export {GoogleButton} from './GoogleButton';
 export {TextInput} from './TextInput';
 export {PasswordInput} from './PasswordInput'
 export {SignUpButton} from './SignUpButton'
+export {LoginButton} from './LoginButton'
