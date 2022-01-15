@@ -1,5 +1,4 @@
 import { ToastAndroid } from 'react-native'
-import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth'
 
 export const loginAuth = async (navigation, email, pwd) =>{

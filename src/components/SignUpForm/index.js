@@ -1,13 +1,10 @@
 import React, {useState} from 'react';
-import { Block2, Input, InputText, Instructions, CheckBoxView, CheckBoxText, TextAlert, ButtonContainer, FooterContainer, CheckboxContainer, SignUpContainer } from './styled';
+import { Block2, Input, InputText, Instructions, CheckBoxView, CheckBoxText, ButtonContainer, FooterContainer, CheckboxContainer, SignUpContainer } from './styled';
 import { SafeAreaView, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import { Link } from '@react-navigation/native';
 import { GrayText, LinkStyle } from '../Styled/generals';
-import { GeneralButton, GoogleButton, PurpleText, TextInput } from '..';
-import { PasswordInput } from '../PasswordInput';
-const Open = require('../../library/images/view.png')
-const Hidden = require('../../library/images/hidden.png')
+import { GeneralButton, GoogleButton, PurpleText, TextInput, PasswordInput } from '..';
 
 
 export const SignUpForm = (props) => {
@@ -31,8 +28,6 @@ export const SignUpForm = (props) => {
             setDisable(false);
         }
     }
-
-
 
     return (
         <SignUpContainer >
@@ -88,9 +83,7 @@ export const SignUpForm = (props) => {
                         navigation={props.navigation}
                     />
                     <CheckBoxText>Or</CheckBoxText>
-                    <GoogleButton 
-                        text={'Sign Up with Google'}
-                    />
+                    <GoogleButton /> 
                 </ButtonContainer>
                 <FooterContainer> 
                     <GrayText>Already have an account? 
