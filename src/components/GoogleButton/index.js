@@ -8,6 +8,7 @@ import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/go
 
 
 GoogleSignin.configure({
+    iosClientId: '92800743295-a9ndhjb4t8f3glso5kjk2idgj8tbpch7.apps.googleusercontent.com',
     webClientId: '92800743295-a9ndhjb4t8f3glso5kjk2idgj8tbpch7.apps.googleusercontent.com',
     });
 
