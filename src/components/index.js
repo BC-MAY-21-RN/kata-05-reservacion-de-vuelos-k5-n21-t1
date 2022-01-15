@@ -11,3 +11,4 @@ export {PurpleText} from './PurpleText';
 export {GoogleButton} from './GoogleButton';
 export {TextInput} from './TextInput';
 export {PasswordInput} from './PasswordInput'
+export {SignUpButton} from './SignUpButton'

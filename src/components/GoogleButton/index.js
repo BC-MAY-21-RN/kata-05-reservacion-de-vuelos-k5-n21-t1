@@ -7,7 +7,7 @@ GoogleSignin.configure({
     webClientId: '92800743295-a9ndhjb4t8f3glso5kjk2idgj8tbpch7.apps.googleusercontent.com',
     });
 
-export const GoogleButton = (props) => {
+export const GoogleButton = () => {
 
     async function onGoogleButtonPress() {
         // Get the users ID token
