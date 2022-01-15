@@ -11,12 +11,12 @@ export const FinalDetails = (props) => {
       <ContainerCenter>
       <SafeAreaView/>
         <FlightDetails
-          OriginCity={'BEG'}
+          OriginCity={props.route.params.origin}
           OriginCountry={'Serbia'}
-          DestinationCity={'AMS'}
+          DestinationCity={props.route.params.destination}
           DestinationCountry={'Netherlands'}
-          Date={'september 3, 2020'}
-          Passengers={'2 passengers'}
+          Date={props.route.params.date}
+          Passengers={props.route.params.passengers}
           noBorder
           />
         <BoldText text={'Your request was received.'} />

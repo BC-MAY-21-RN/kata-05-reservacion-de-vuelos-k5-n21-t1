@@ -13,7 +13,6 @@ export const Date = (props) => {
   const [disable, setDisable] = useState(true)
   const [guardarFecha, setGuardarFecha] = useState({});
 
-  console.log(guardarFecha);
 
   return (
     <ContainerTop>
@@ -21,10 +20,10 @@ export const Date = (props) => {
         navigation={props.navigation}
       />
       <FlightDetails
-        OriginCity={'BEG'}
+        OriginCity={props.route.params.origin}
         OriginCountry={'Serbia'}
-        DestinationCity={'AMS'}
-        DestinationCountry={'Netherlands'}
+        DestinationCity={props.route.params.destination}
+        DestinationCountry={''}
         noBorder
       />
       <ContainerCenter>
@@ -40,6 +39,9 @@ export const Date = (props) => {
         text={'Next'} 
         onPress={'Passengers'}
         navigation={props.navigation}
+        origin={props.route.params.origin}
+        destination={props.route.params.destination}
+        date={guardarFecha.dateString}
       />
     </ContainerTop>
   );

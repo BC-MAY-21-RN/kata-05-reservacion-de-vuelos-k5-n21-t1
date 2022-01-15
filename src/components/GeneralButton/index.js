@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { ButtonGeneral, TextGeneral ,ContainerButton} from './styled'
-import auth from '@react-native-firebase/auth';
 
 export const GeneralButton = (props) => {
     
@@ -10,7 +9,17 @@ export const GeneralButton = (props) => {
             <ButtonGeneral
                 disabled={props.disabled}
                 onPress={() => {
-                    props.navigation.navigate(props.onPress) 
+                    props.navigation.navigate(
+                        props.onPress, {
+                            origin: props.origin, 
+                            destination: props.destination, 
+                            date: props.date,
+                            passengers: props.passengers
+                    }) 
+                    console.log(props.origin);
+                    console.log(props.destination);
+                    console.log(props.date);
+                    console.log(props.passengers);
                 }}
             >
                 <TextGeneral>{props.text}</TextGeneral>

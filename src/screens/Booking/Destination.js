@@ -17,6 +17,8 @@ import {BorderBottom} from '../styled';
 export const Destination = (props) => {
 
   const [disable, setDisable] = useState(false)
+  const [destination, setDestination] = useState("USA, Los Angeles")
+
 
   return (
     <>
@@ -25,7 +27,7 @@ export const Destination = (props) => {
           navigation={props.navigation}
           />
         <FlightDetails
-          OriginCity={'BEG'}
+          OriginCity={props.route.params.origin}
           OriginCountry={'Serbia'}
           style={{alignSelf: 'flex-start'}}
           noBorder
@@ -33,7 +35,9 @@ export const Destination = (props) => {
         <BorderBottom />
         <ContainerCenter>
           <BoldText text={'Where will you be flying to?'} />
-          <PickerCountries />
+          <PickerCountries 
+            setCountry={setDestination}
+          />
         </ContainerCenter>
         <GeneralButton 
           height
@@ -41,6 +45,8 @@ export const Destination = (props) => {
           disabled={disable}
           text={'Next'} 
           navigation={props.navigation}
+          origin={props.route.params.origin}
+          destination={destination}
           />
       </ContainerTop>
     </>
