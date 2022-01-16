@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {FlightDetails, GeneralButton, BoldText} from '../../components';
 import {ContainerCenter} from '../../components/Styled/generals';
+import firestore from '@react-native-firebase/firestore';
 
 export const FinalDetails = (props) => {
+
+  async function loadData () {
+    try {
+      const flights = await  firestore().collection('Flights').get()
+      console.log(flights);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    loadData()
+  }, [])
+
   return (
     <>
     <SafeAreaView/>
