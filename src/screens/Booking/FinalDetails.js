@@ -1,23 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {FlightDetails, GeneralButton, BoldText} from '../../components';
+import {FlightDetails, GeneralButton, BoldText, UploadButton} from '../../components';
 import {ContainerCenter} from '../../components/Styled/generals';
 import firestore from '@react-native-firebase/firestore';
 
 export const FinalDetails = (props) => {
 
-  async function loadData () {
+  const uploadFlight = () => {
     try {
-      const flights = await  firestore().collection('Flights').get()
-      console.log(flights);
+      firestore().collection('Flights').add({
+        date: props.route.params.date,
+        destinationCity: props.route.params.destinationCity,
+        destinationCountry: props.route.params.destinationCountry,
+        originCity: props.route.params.originCity,
+        originCountry: props.route.params.originCountry,
+        passengers: props.route.params.passengers
+      })
     } catch (error) {
       console.log(error);
     }
   }
 
-  useEffect(() => {
-    loadData()
-  }, [])
+  
 
   return (
     <>
@@ -46,6 +50,9 @@ export const FinalDetails = (props) => {
           destination={props.route.params.destination}
           date={props.route.params.date}
           passengers={props.route.params.passengers}
+        />
+        <UploadButton
+          uploadFlight={uploadFlight()}
         />
     </>
   );

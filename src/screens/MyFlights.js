@@ -24,28 +24,28 @@ export const MyFlights = (props) => {
 
     const renderItem = ({ item }) => {
         return(
-            <FlightDetails 
-                OriginCity={item.data().originCity}
-                OriginCountry={item.data().originCountry}
-                DestinationCity={item.data().destinationCity}
-                DestinationCountry={item.data().destinationCountry}
-                Date={item.data().date}
-                Passengers={item.data().passengers}
-            />
+            <>
+                <FlightDetails 
+                    OriginCity={item.data().originCity}
+                    OriginCountry={item.data().originCountry}
+                    DestinationCity={item.data().destinationCity}
+                    DestinationCountry={item.data().destinationCountry}
+                    Date={item.data().date}
+                    Passengers={item.data().passengers}
+                />
+            </>
         )
     }
 
     return (
         <>
-            <ScrollView>
-                <SafeAreaView />
-                <PurpleText>My flights</PurpleText>
-                <FlatList 
-                    data={ data} 
-                    renderItem={ renderItem }
-                    keyExtractor={ item => item.id }
-                />
-            </ScrollView>
+            <SafeAreaView />
+            <PurpleText>My flights</PurpleText>
+            <FlatList 
+                data={ data} 
+                renderItem={ renderItem }
+                keyExtractor={ item => item.id }
+            />
             <AddButton
                 onPress={'Origin'}
                 navigation={props.navigation}
