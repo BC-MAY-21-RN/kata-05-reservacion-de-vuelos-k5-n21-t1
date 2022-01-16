@@ -11,10 +11,10 @@ export const FinalDetails = (props) => {
       <ContainerCenter>
       <SafeAreaView/>
         <FlightDetails
-          OriginCity={props.route.params.origin}
-          OriginCountry={'Serbia'}
-          DestinationCity={props.route.params.destination}
-          DestinationCountry={'Netherlands'}
+          OriginCity={props.route.params.originCity}
+          OriginCountry={props.route.params.originCountry}
+          DestinationCity={props.route.params.destinationCity}
+          DestinationCountry={props.route.params.destinationCountry}
           Date={props.route.params.date}
           Passengers={props.route.params.passengers}
           noBorder
@@ -27,6 +27,10 @@ export const FinalDetails = (props) => {
           text="Next"
           onPress={'MyFlights'}
           navigation={props.navigation}
+          origin={props.route.params.origin}
+          destination={props.route.params.destination}
+          date={props.route.params.date}
+          passengers={props.route.params.passengers}
         />
     </>
   );

@@ -17,7 +17,7 @@ import {BorderBottom} from '../styled';
 export const Destination = (props) => {
 
   const [disable, setDisable] = useState(false)
-  const [destination, setDestination] = useState("USA, Los Angeles")
+  const [destination, setDestination] = useState("")
 
 
   return (
@@ -27,8 +27,8 @@ export const Destination = (props) => {
           navigation={props.navigation}
           />
         <FlightDetails
-          OriginCity={props.route.params.origin}
-          OriginCountry={'Serbia'}
+          OriginCity={props.route.params.originCity}
+          OriginCountry={props.route.params.originCountry}
           style={{alignSelf: 'flex-start'}}
           noBorder
           />

@@ -18,10 +18,10 @@ export const Passengers = (props) => {
         navigation={props.navigation}
        />
       <FlightDetails
-        OriginCity={props.route.params.origin}
-        OriginCountry={'Serbia'}
-        DestinationCity={props.route.params.destination}
-        DestinationCountry={'Netherlands'}
+        OriginCity={props.route.params.originCity}
+        OriginCountry={props.route.params.originCountry}
+        DestinationCity={props.route.params.destinationCity}
+        DestinationCountry={props.route.params.destinationCountry}
         Date={props.route.params.date}
         noBorder
       />

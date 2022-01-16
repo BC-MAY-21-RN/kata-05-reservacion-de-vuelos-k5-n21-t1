@@ -3,6 +3,10 @@ import { ButtonGeneral, TextGeneral ,ContainerButton} from './styled'
 
 export const GeneralButton = (props) => {
     
+    const originCity = props.origin.substring(0, 3);
+    const originCountry = props.origin.substring(5);
+    const destinationCity = props.destination.substring(0,3);
+    const destinationCountry = props.destination.substring(5);
 
     return (
         <ContainerButton height={props.height}>
@@ -12,14 +16,14 @@ export const GeneralButton = (props) => {
                     props.navigation.navigate(
                         props.onPress, {
                             origin: props.origin, 
+                            originCity: originCity,
+                            originCountry: originCountry,
                             destination: props.destination, 
+                            destinationCity: destinationCity,
+                            destinationCountry: destinationCountry,
                             date: props.date,
                             passengers: props.passengers
                     }) 
-                    console.log(props.origin);
-                    console.log(props.destination);
-                    console.log(props.date);
-                    console.log(props.passengers);
                 }}
             >
                 <TextGeneral>{props.text}</TextGeneral>
