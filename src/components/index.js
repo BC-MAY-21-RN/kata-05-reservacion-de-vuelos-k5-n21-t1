@@ -4,6 +4,7 @@ export {CalendarDate} from './CalendarDate'
 export {FlightDetails} from './FlightDetails';
 export {GeneralButton} from './GeneralButton';
 export {LoginForm} from './LoginForm';
+export {LogOutButton} from './LogOutButton'
 export {PickerPassengers} from './PickerPassengers'
 export {SignUpForm} from './SignUpForm';
 export {ArrowButton} from './ArrowButton';

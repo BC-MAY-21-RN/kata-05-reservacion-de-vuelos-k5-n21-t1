@@ -2,7 +2,7 @@ import styled  from "styled-components";
 
 export const DetailsContainer = styled.View`
     border-bottom-color: black;
-    border-bottom-width: ${(props) => props.noBorder ? '0px': '1.5px'}};
+    border-bottom-width: ${(props) => props.noBorder ? '0px': '1.5px' } ;
     display: flex;
     flex-direction: column;
     margin-top: 40px;

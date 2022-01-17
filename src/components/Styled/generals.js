@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 export const PurpleText = styled.Text`
     align-self : flex-start;
     color: #5c6ef8;
@@ -14,8 +12,8 @@ export const GlobalBlock = styled.View`
     position:absolute;
     bottom: 15px;
     height: 65px;
-    alignItems: center;
-    alignSelf: center;
+    align-items: center;
+    align-self: center;
     padding: 10px;
 `;
 
@@ -37,7 +35,6 @@ export const Flights = styled.View`
 export const GrayText = styled.Text`
     color: gray;
     font-size: 18px;
-
 `;
 
 export const BoldTitle = styled.Text`
@@ -54,20 +51,19 @@ export const Container = styled.View`
 
 export const ContainerCenter = styled.View`
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start ;
+    justify-content: flex-start;
     margin-top: 10px;
-    height:60%;
+    height: 60%;
 `;
 
 export const ContainerTop = styled.View`
     height: 100%;
-
 `
 
 export const LinkStyle = styled.Text`
     color: #5b6df7;
     font-size: 16px;
-    text-decoration: underline
+    text-decoration: underline;
 `

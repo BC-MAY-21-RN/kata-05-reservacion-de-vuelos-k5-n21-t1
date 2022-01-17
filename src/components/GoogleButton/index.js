@@ -7,7 +7,7 @@ GoogleSignin.configure({
     webClientId: '92800743295-a9ndhjb4t8f3glso5kjk2idgj8tbpch7.apps.googleusercontent.com',
     });
 
-export const GoogleButton = () => {
+export const GoogleButton = (props) => {
 
     async function onGoogleButtonPress() {
         // Get the users ID token
@@ -28,7 +28,7 @@ export const GoogleButton = () => {
                 color={GoogleSigninButton.Color.Dark}
                 onPress={() => 
                     onGoogleButtonPress().then(() => 
-                    console.log("Sesion Iniciada"))
+                    props.navigation.navigate('MyFlights'))
                     .catch(err=>console.log(err)) 
                 }
             />
