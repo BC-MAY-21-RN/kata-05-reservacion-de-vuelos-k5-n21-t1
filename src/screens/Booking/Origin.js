@@ -5,13 +5,12 @@ import { PickerCountries } from '../../components/PickerCountries';
 import {
   ContainerCenter,
   ContainerTop,
-  InputLocation,
 } from '../../components/Styled/generals';
 
 export const Origin = (props) => {
 
   const [disable, setDisable] = useState(false)
-
+  const [origin, setOrigin] = useState("")
 
   return (
     <>
@@ -21,7 +20,10 @@ export const Origin = (props) => {
         />
         <ContainerCenter>
           <BoldText text={'Where are you now?'} />
-          <PickerCountries />
+          <PickerCountries 
+            selectedCountry={props.selectedValue}
+            setCountry={setOrigin}
+          />
         </ContainerCenter>
         <SafeAreaView/>
         <SafeAreaView/>
@@ -30,6 +32,10 @@ export const Origin = (props) => {
           text="Next"
           onPress={'Destination'}
           navigation={props.navigation}
+          origin={origin}
+          destination={""}
+          date={""}
+          passengers={""}
         />
       </ContainerTop>
     </>

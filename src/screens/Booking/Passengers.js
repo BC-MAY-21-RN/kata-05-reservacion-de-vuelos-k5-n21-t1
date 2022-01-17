@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BoldText,
   GeneralButton,
@@ -10,27 +10,35 @@ import {ContainerTop} from '../../components/Styled/generals';
 import {PickerContainer } from '../styled';
 
 export const Passengers = (props) => {
+
+  const [passengers, setPassengers] = useState('')
   return (
     <ContainerTop>
       <ArrowButton
         navigation={props.navigation}
        />
       <FlightDetails
-        OriginCity={'BEG'}
-        OriginCountry={'Serbia'}
-        DestinationCity={'AMS'}
-        DestinationCountry={'Netherlands'}
-        Date={'september 3, 2020'}
+        OriginCity={props.route.params.originCity}
+        OriginCountry={props.route.params.originCountry}
+        DestinationCity={props.route.params.destinationCity}
+        DestinationCountry={props.route.params.destinationCountry}
+        Date={props.route.params.date}
         noBorder
       />
       <PickerContainer>
         <BoldText text={'How many passengers?'} />
       </PickerContainer>
-      <PickerPassengers />
+      <PickerPassengers 
+        setPassengers={setPassengers}
+      />
       <GeneralButton
         text={'Next'}
         onPress={'FinalDetails'}
         navigation={props.navigation}
+        origin={props.route.params.origin}
+        destination={props.route.params.destination}
+        date={props.route.params.date}
+        passengers={passengers}
         />
     </ContainerTop>
   );

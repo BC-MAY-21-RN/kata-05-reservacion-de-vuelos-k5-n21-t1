@@ -2,10 +2,13 @@ import React from 'react'
 import {Picker} from '@react-native-picker/picker';
 import { PassengersContainer } from './styled';
 
-export const PickerPassengers = () => {
+export const PickerPassengers = (props) => {
     return (
       <PassengersContainer>
-        <Picker>
+        <Picker
+          onValueChange={(itemValue, itemIndex) => 
+            props.setPassengers(itemValue)
+        }>
           <Picker.Item label="1" value="1" />
           <Picker.Item label="2" value="2" />
           <Picker.Item label="3" value="3" />
