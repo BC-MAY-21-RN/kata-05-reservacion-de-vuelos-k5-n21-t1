@@ -6,6 +6,7 @@ export const TextInput = (props) => {
     return(
         <Input 
             onChangeText={props.handleText}
+            autoCapitalize={false}
         />
     )
 }

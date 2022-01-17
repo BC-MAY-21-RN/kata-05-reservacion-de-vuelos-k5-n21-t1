@@ -8,6 +8,7 @@ import firestore from '@react-native-firebase/firestore';
 export const MyFlights = (props) => {
 
     const [data, setData] = useState()
+    const [rtData, setRTData] = useState([])
 
     async function loadData () {
         try {
@@ -18,20 +19,34 @@ export const MyFlights = (props) => {
         }
     }
 
+    async function loadRTData() {
+        const subscriber = firestore().collection('Flights').onSnapshot(querySnapshot => {
+            const flights = []
+            querySnapshot.forEach(documentSnapshot => {
+                flights.push({
+                    ...documentSnapshot.data(),
+                    key: documentSnapshot.id
+                })
+            })
+            setRTData(flights)
+        })
+    }
+
     useEffect(() => {
         loadData()
+        loadRTData()
     }, [])
 
-    const renderItem = ({ item }) => {
+    const renderRTItem = ({ item }) => {
         return(
             <>
                 <FlightDetails 
-                    OriginCity={item.data().originCity}
-                    OriginCountry={item.data().originCountry}
-                    DestinationCity={item.data().destinationCity}
-                    DestinationCountry={item.data().destinationCountry}
-                    Date={item.data().date}
-                    Passengers={item.data().passengers}
+                    OriginCity={item.originCity}
+                    OriginCountry={item.originCountry}
+                    DestinationCity={item.destinationCity}
+                    DestinationCountry={item.destinationCountry}
+                    Date={item.date}
+                    Passengers={item.passengers}
                 />
             </>
         )
@@ -42,9 +57,9 @@ export const MyFlights = (props) => {
             <SafeAreaView />
             <PurpleText>My flights</PurpleText>
             <FlatList 
-                data={ data} 
-                renderItem={ renderItem }
-                keyExtractor={ item => item.id }
+                data={ rtData} 
+                renderItem={ renderRTItem }
+                keyExtractor={ item => item.key }
             />
             <AddButton
                 onPress={'Origin'}

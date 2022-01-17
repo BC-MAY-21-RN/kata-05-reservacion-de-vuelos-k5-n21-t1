@@ -24,6 +24,7 @@ export const PasswordInput = (props) => {
             <InputPassword
                 onChangeText={props.handlePassword}
                 secureTextEntry={secureTextEntry.entry}
+                autoCapitalize={false}
             />
             <TouchableOpacity onPress={onIconChange}>
                 <Eye source={secureTextEntry.icon}/>
