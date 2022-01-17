@@ -1,8 +1,4 @@
 import React from "react";
-import { ButtonGeneral, ContainerButton, TextGeneral } from "../GeneralButton/styled";
-import { Google } from "../../library/images";
-import { GoogleIcon } from "./styled";
-
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
 
@@ -11,7 +7,7 @@ GoogleSignin.configure({
     webClientId: '92800743295-a9ndhjb4t8f3glso5kjk2idgj8tbpch7.apps.googleusercontent.com',
     });
 
-export const GoogleButton = (props) =>{
+export const GoogleButton = () => {
 
     async function onGoogleButtonPress() {
         // Get the users ID token
@@ -22,24 +18,20 @@ export const GoogleButton = (props) =>{
       
         // Sign-in the user with the credential
         return auth().signInWithCredential(googleCredential);
-      }
+     }
 
-
-
-    const logOut = ()=>{
-        auth().signOut().then(() => console.log('User signed out!'));
-
-        console.log("Sesion Cerrada")
-    }
     return (
-        <ContainerButton height={props.height}>
-            <ButtonGeneral
-                disabled={props.disabled}
-                onPress={() => onGoogleButtonPress().then(() => console.log("Sesion Iniciada")).catch(err=>console.log(err))}
-            >
-                <GoogleIcon source={Google}/>
-                <TextGeneral>{props.text}</TextGeneral>
-            </ButtonGeneral>
-        </ContainerButton>
+        <>
+            <GoogleSigninButton 
+                style={{ width: 278, height: 45 }}
+                size={GoogleSigninButton.Size.Wide}
+                color={GoogleSigninButton.Color.Dark}
+                onPress={() => 
+                    onGoogleButtonPress().then(() => 
+                    console.log("Sesion Iniciada"))
+                    .catch(err=>console.log(err)) 
+                }
+            />
+        </>
     )
 }

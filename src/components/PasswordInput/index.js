@@ -20,8 +20,7 @@ export const PasswordInput = (props) => {
     }
 
     return(
-        <PasswordView
-        >
+        <PasswordView>
             <InputPassword
                 onChangeText={props.handlePassword}
                 secureTextEntry={secureTextEntry.entry}
