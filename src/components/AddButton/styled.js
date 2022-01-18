@@ -7,12 +7,13 @@ export const AddImage = styled.Image`
 
 export const AddImageBlock = styled.TouchableOpacity`
     display: flex;  
-    alignItems: center;
+    align-items: center;
     justify-content: flex-end;
     height: 80px;
     width: 80px;
     position: absolute;
     bottom: 60px;
     alignSelf: center;
+
     
 `

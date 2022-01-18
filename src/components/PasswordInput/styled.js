@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const PasswordView = styled.View`
     flex-direction: row;
-    borderWidth: 1px;
+    border-width: 1px;
     margin-top: 10px;
-    alignItems: center;
+    align-items: center;
 `
 
 export const InputPassword = styled.TextInput`
@@ -16,5 +16,5 @@ export const InputPassword = styled.TextInput`
 export const Eye = styled.Image`
     width: 30px;
     height: 30px;
-    marginRight: 10px;
+    margin-right: 10px;
 `

@@ -95,7 +95,7 @@ export const SignUpForm = (props) => {
                         password={passwordText}
                     />
                     <CheckBoxText>Or</CheckBoxText>
-                    <GoogleButton /> 
+                    <GoogleButton navigation={props.navigation}/> 
                 </ButtonContainer>
                 <FooterContainer> 
                     <GrayText>Already have an account? 

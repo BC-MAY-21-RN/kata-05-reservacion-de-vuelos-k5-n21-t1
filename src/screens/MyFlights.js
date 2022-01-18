@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { FlatList, ScrollView } from 'react-native'
+import React, { useEffect, useState, useContext } from 'react'
+import { FlatList, ScrollView, Button } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { FlightDetails, AddButton, LogOutButton } from '../components'
 import { PurpleText } from '../components/Styled/generals'
