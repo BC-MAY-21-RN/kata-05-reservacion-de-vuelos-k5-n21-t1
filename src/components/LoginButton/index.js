@@ -16,7 +16,6 @@ export const LoginButton = (props) => {
             <ButtonGeneral
                 disabled={props.disabled}
                 onPress={() => {
-                    
                     auth()
                     .signInWithEmailAndPassword(email, password)
                     .then(() => {
@@ -30,6 +29,7 @@ export const LoginButton = (props) => {
                             alert('Invalid email, please try again')
                             
                         }
+
                     });
                 }}
             >

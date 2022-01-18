@@ -15,10 +15,16 @@ export const SignUpButton = (props) => {
             <ButtonGeneral
                 disabled={props.disabled}
                 onPress={() => {
-                    props.navigation.navigate(props.onPress) 
                     auth()
                     .createUserWithEmailAndPassword(email, password)
                     .then(() => {
+                        props.navigation.navigate(props.onPress) 
+                        firestore().collection('users').doc(auth().currentUser.uid)
+                        .set({
+                            name: '',
+                            email: email,
+                            password: password,
+                        })
                         console.log('User account created & signed in!');
                     })
                     .catch(error => {
@@ -26,10 +32,10 @@ export const SignUpButton = (props) => {
                             showToast('That email address is already in use!')
                             alert('That email address is already in use!')
                         }
-                        
                         if (error.code === 'auth/invalid-email') {
                             showToast('That email address is invalid!')
                             alert('That email address is invalid!')
+
                         }
                     });
                 }}

@@ -3,12 +3,18 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import {FlightDetails, GeneralButton, BoldText} from '../../components';
 import {ContainerCenter} from '../../components/Styled/generals';
 import firestore from '@react-native-firebase/firestore';
+import auth from '@react-native-firebase/auth';
 
 export const FinalDetails = (props) => {
 
-  const uploadFlight = () => {
+  var id = auth().currentUser.uid
+  console.log(id);
+  
+  function uploadFlight () {
+
     try {
       firestore().collection('Flights').add({
+        userId: id,
         date: props.route.params.date,
         destinationCity: props.route.params.destinationCity,
         destinationCountry: props.route.params.destinationCountry,
