@@ -6,8 +6,8 @@ import { ToastAndroid } from 'react-native';
 export const SignUpButton = (props) => {
 
     const { email, password } = props
-    const showToast = () => {
-        ToastAndroid.show("That email address is already in use!", ToastAndroid.LONG);
+    const showToast = (text) => {
+        ToastAndroid.show(text, ToastAndroid.LONG);
     };
 
     return(
@@ -22,13 +22,14 @@ export const SignUpButton = (props) => {
                         console.log('User account created & signed in!');
                     })
                     .catch(error => {
-                        showToast()
                         if (error.code === 'auth/email-already-in-use') {
-                            console.log('That email address is already in use!');
+                            showToast('That email address is already in use!')
+                            alert('That email address is already in use!')
                         }
                         
                         if (error.code === 'auth/invalid-email') {
-                            console.log('That email address is invalid!');
+                            showToast('That email address is invalid!')
+                            alert('That email address is invalid!')
                         }
                         
                         console.error(error);

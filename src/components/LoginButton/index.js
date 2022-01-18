@@ -6,9 +6,11 @@ import { ToastAndroid } from 'react-native';
 export const LoginButton = (props) => {
 
     const { email, password } = props
-    const showToast = () => {
-        ToastAndroid.show("INCORRECT USER OR PASSWORD, PLEASE CHECK!!!", ToastAndroid.LONG);
+
+    const showToast = (text) => {
+        ToastAndroid.show(text, ToastAndroid.LONG);
     };
+
     return(
         <ContainerButton height={props.height}>
             <ButtonGeneral
@@ -22,13 +24,10 @@ export const LoginButton = (props) => {
                         console.log('User signed in!');
                     })
                     .catch(error => {
-                        showToast()
-                        if (error.code === 'auth/email-already-in-use') {
-                            console.log('That email address is already in use!');
-                        }
                         
                         if (error.code === 'auth/invalid-email') {
-                            console.log('That email address is invalid!');
+                            showToast('Invalid email or password, please try again')
+                            alert('Invalid email, please try again')
                             
                         }
                         
