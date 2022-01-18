@@ -8,6 +8,7 @@ export const PickerCountries = (props) => {
     return (
         <CountriesContainer>
             <Picker
+                selectedValue={props.selectedNation}
                 onValueChange={(itemValue, itemIndex) => 
                     props.setCountry(itemValue)
             }>

@@ -30,6 +30,7 @@ export const Passengers = (props) => {
       </PickerContainer>
       <PickerPassengers 
         setPassengers={setPassengers}
+        selectedNumber={passengers}
       />
       <GeneralButton
         text={'Next'}
