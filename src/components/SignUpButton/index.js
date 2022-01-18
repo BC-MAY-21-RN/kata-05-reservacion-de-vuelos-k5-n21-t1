@@ -15,6 +15,12 @@ export const SignUpButton = (props) => {
                     .createUserWithEmailAndPassword(email, password)
                     .then(() => {
                         props.navigation.navigate(props.onPress) 
+                        firestore().collection('users').doc(auth().currentUser.uid)
+                        .set({
+                            name: '',
+                            email: email,
+                            password: password,
+                        })
                         console.log('User account created & signed in!');
                     })
                     .catch(error => {

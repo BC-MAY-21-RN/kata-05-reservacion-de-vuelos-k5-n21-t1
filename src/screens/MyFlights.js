@@ -4,11 +4,14 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { FlightDetails, AddButton } from '../components'
 import { PurpleText } from '../components/Styled/generals'
 import firestore from '@react-native-firebase/firestore';
+import auth from '@react-native-firebase/auth';
 
 export const MyFlights = (props) => {
 
     const [data, setData] = useState()
     const [rtData, setRTData] = useState([])
+    const [user, setUser] = useState([])
+
 
     async function loadData () {
         try {
@@ -38,18 +41,23 @@ export const MyFlights = (props) => {
     }, [])
 
     const renderRTItem = ({ item }) => {
-        return(
+        if (auth().currentUser.uid == item.userId){
+            return(
+                <>
+                    <FlightDetails 
+                        OriginCity={item.originCity}
+                        OriginCountry={item.originCountry}
+                        DestinationCity={item.destinationCity}
+                        DestinationCountry={item.destinationCountry}
+                        Date={item.date}
+                        Passengers={item.passengers}
+                    />
+                </>
+            )
+        } else{
             <>
-                <FlightDetails 
-                    OriginCity={item.originCity}
-                    OriginCountry={item.originCountry}
-                    DestinationCity={item.destinationCity}
-                    DestinationCountry={item.destinationCountry}
-                    Date={item.date}
-                    Passengers={item.passengers}
-                />
             </>
-        )
+        }
     }
 
     return (
