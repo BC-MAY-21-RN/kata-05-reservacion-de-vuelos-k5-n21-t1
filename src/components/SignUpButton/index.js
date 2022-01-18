@@ -31,8 +31,6 @@ export const SignUpButton = (props) => {
                             showToast('That email address is invalid!')
                             alert('That email address is invalid!')
                         }
-                        
-                        console.error(error);
                     });
                 }}
             >

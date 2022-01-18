@@ -30,8 +30,6 @@ export const LoginButton = (props) => {
                             alert('Invalid email, please try again')
                             
                         }
-                        
-                        console.error(error);
                     });
                 }}
             >

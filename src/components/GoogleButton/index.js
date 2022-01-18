@@ -23,7 +23,12 @@ export const GoogleButton = (props) => {
     return (
         <>
             <GoogleSigninButton 
-                style={{ width: 278, height: 45 }}
+                style={{ 
+                    width: 278, 
+                    height: 45,
+                    borderRadius: 20,
+                    fontSize: 18
+                }}
                 size={GoogleSigninButton.Size.Wide}
                 color={GoogleSigninButton.Color.Dark}
                 onPress={() => 

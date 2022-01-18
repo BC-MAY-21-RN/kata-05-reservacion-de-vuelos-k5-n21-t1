@@ -15,6 +15,7 @@ export const TextGeneral = styled.Text`
   color: #ffffff;
   font-size: 18px;
 `;
+
 export const ContainerButton = styled.View`
   align-self: center;
   display: flex;

@@ -1,4 +1,3 @@
-//COMIENZA LO MIO -- HUGO
 import styled from 'styled-components';
 import { ContainerTop } from '../Styled/generals';
 
@@ -27,7 +26,7 @@ export const Block1 = styled.View`
 `
 export const Block2 = styled.View`
     display: flex;
-    margin-bottom: 30px;
+    padding-top: 10%
 `
 export const Block3 = styled.View`
     display: flex;
@@ -96,12 +95,14 @@ export const ButtonContainer = styled.View`
 export const FooterContainer = styled.View`
     align-self: center;
     justify-content: flex-end;
-    height: 20%;
+    height: 10%;
 `
 
 export const CheckboxContainer = styled.View`
-    justify-content: space-between;
-    height: 8%;
+
+    align-self: center
+    justify-content: center;
+    height: 15%;
 `
 
 export const SignUpContainer = styled(ContainerTop)`

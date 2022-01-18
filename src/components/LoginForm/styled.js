@@ -19,7 +19,6 @@ export const InputTitle = styled.Text`
 
 export const TextContainer = styled.View`
     align-self: center;
-    justify-content: center;
     display: flex;
     flex-direction: row;
     margin-top: 30px;
