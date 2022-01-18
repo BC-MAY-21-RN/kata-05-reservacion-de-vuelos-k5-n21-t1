@@ -1,11 +1,10 @@
-//COMIENZA LO MIO -- HUGO
 import styled from 'styled-components';
 import { ContainerTop } from '../Styled/generals';
 
 export const InputText = styled.Text`
     font-size: 18px;
-    marginTop: 20px;
-    Color: #b6b7ba;
+    margin-top: 20px;
+    color: #b6b7ba;
 `
 export const Instructions = styled.Text`
     color:gray;     
@@ -21,13 +20,13 @@ export const Block = styled.View`
 `
 export const Block1 = styled.View`
     display: flex;
-    justifyContent: center;
-    marginTop: 25px
-    marginBottom: 5px
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 5px
 `
 export const Block2 = styled.View`
     display: flex;
-    marginBottom: 30px;
+    padding-top: 10%
 `
 export const Block3 = styled.View`
     display: flex;
@@ -41,43 +40,43 @@ export const Block4 = styled.View`
 
 export const CheckBoxView = styled.View`
     flex-direction: row;
-    alignItems: center;
+    align-items: center;
     justify-content: space-between;
 `
 
 export const CheckBoxText = styled.Text`
     font-size: 18px;
     color:gray; 
-    textAlign: center;
+    text-align: center;
 `
 
 export const TextButton = styled.Text`
-    fontSize: 16px;
-    fontWeight: bold;
+    font-size: 16px;
+    font-weight: bold;
     color: white;
-    textAlign: center;
+    text-align: center;
 `
 
 export const SignUpButton = styled.View`
     display: flex;
     flex-direction: row;
-    borderWidth: 1px;
-    backgroundColor: #5974F5;
+    border-width: 1px;
+    background-color: #5974F5;
     border-radius: 10px;
     overflow: hidden;
-    alignItems: center
+    align-items: center
 `
 export const GoogleIcon = styled.Image`
     width: 20px;
     height: 20px;
-    marginLeft: 40px;
+    margin-left: 40px;
 `
 
 export const LoginText = styled.Text`
     font-size: 18px;
     color:gray; 
-    textAlign: center;
-    marginTop: 20px;
+    text-align: center;
+    margin-top: 20px;
 `
 
 export const TextAlert = styled.Text`
@@ -96,12 +95,14 @@ export const ButtonContainer = styled.View`
 export const FooterContainer = styled.View`
     align-self: center;
     justify-content: flex-end;
-    height: 20%;
+    height: 10%;
 `
 
 export const CheckboxContainer = styled.View`
-    justify-content: space-between;
-    height: 8%;
+
+    align-self: center
+    justify-content: center;
+    height: 15%;
 `
 
 export const SignUpContainer = styled(ContainerTop)`

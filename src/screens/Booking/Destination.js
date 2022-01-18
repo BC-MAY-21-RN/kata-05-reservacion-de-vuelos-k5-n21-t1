@@ -37,6 +37,7 @@ export const Destination = (props) => {
           <BoldText text={'Where will you be flying to?'} />
           <PickerCountries 
             setCountry={setDestination}
+            selectedNation={destination}
           />
         </ContainerCenter>
         <GeneralButton 

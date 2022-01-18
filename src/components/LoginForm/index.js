@@ -47,7 +47,6 @@ export const LoginForm = (props) => {
                 password={passwordText}
             />
 
-            <GoogleButton />
 
             <TextContainer>          
                 <GrayText>Don't have an account? </GrayText>

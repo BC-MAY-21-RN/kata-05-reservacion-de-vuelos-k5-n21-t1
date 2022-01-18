@@ -23,6 +23,7 @@ export const Origin = (props) => {
           <PickerCountries 
             selectedCountry={props.selectedValue}
             setCountry={setOrigin}
+            selectedNation={origin}
           />
         </ContainerCenter>
         <SafeAreaView/>

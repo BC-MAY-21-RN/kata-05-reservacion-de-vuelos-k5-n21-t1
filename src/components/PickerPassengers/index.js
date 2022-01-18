@@ -6,6 +6,7 @@ export const PickerPassengers = (props) => {
     return (
       <PassengersContainer>
         <Picker
+          selectedValue={props.selectedNumber}
           onValueChange={(itemValue, itemIndex) => 
             props.setPassengers(itemValue)
         }>

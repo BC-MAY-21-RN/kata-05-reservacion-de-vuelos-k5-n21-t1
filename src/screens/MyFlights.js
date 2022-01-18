@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { FlatList, ScrollView } from 'react-native'
+import React, { useEffect, useState, useContext } from 'react'
+import { FlatList, ScrollView, Button } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { FlightDetails, AddButton } from '../components'
+import { FlightDetails, AddButton, LogOutButton } from '../components'
 import { PurpleText } from '../components/Styled/generals'
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
@@ -69,6 +69,7 @@ export const MyFlights = (props) => {
                 renderItem={ renderRTItem }
                 keyExtractor={ item => item.key }
             />
+            <LogOutButton navigation={props.navigation}/>
             <AddButton
                 onPress={'Origin'}
                 navigation={props.navigation}

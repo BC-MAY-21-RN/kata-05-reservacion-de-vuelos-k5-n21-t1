@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {FlightDetails, GeneralButton, BoldText, UploadButton} from '../../components';
+import {FlightDetails, GeneralButton, BoldText} from '../../components';
 import {ContainerCenter} from '../../components/Styled/generals';
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
@@ -27,6 +27,9 @@ export const FinalDetails = (props) => {
     }
   }
 
+  useEffect(() => {
+    uploadFlight()
+  })
   
 
   return (
@@ -57,9 +60,7 @@ export const FinalDetails = (props) => {
           date={props.route.params.date}
           passengers={props.route.params.passengers}
         />
-        <UploadButton
-          uploadFlight={uploadFlight()}
-        />
+        
     </>
   );
 };
