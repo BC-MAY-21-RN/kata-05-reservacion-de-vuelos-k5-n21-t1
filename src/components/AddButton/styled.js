@@ -12,7 +12,8 @@ export const AddImageBlock = styled.TouchableOpacity`
     height: 80px;
     width: 80px;
     position: absolute;
-    bottom: 50px;
-    align-self: center;
+    bottom: 60px;
+    alignSelf: center;
+
     
 `
