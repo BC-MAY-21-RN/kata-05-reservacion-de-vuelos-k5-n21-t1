@@ -1,65 +1,39 @@
-import React, {useState} from 'react';
-import { Block2, Input, InputText, Instructions, CheckBoxView, CheckBoxText, ButtonContainer, FooterContainer, CheckboxContainer, SignUpContainer } from './styled';
+import React from 'react';
+import { Block2, InputText, Instructions, CheckBoxView, CheckBoxText, ButtonContainer, FooterContainer, CheckboxContainer, SignUpContainer } from './styled';
 import { SafeAreaView, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import { Link } from '@react-navigation/native';
 import { GrayText, LinkStyle } from '../Styled/generals';
 import { GoogleButton, PurpleText, TextInput, PasswordInput, SignUpButton} from '..';
-
+import { SignUpCustomHook } from '../../library/CustomHooks/SignUpCustomHook';
 
 export const SignUpForm = (props) => {
 
-    const [disable, setDisable] = useState(true);
-    const [name, setName] = useState(false);
-    const [email, setEmail] = useState(false);
-    const [emailText, setEmailText] = useState('');
-    const [password, setPassword] = useState(false);
-    const [passwordText, setPasswordText] = useState('');
-    const [terms, setTerms] = useState(false);
-    const [subscribe, setSubscribe] = useState(false);
-
-    const handleText = text => {
-        if(text.length >= 1){
-            setEmail(true);
-            setEmailText(text)
-        } 
-    }
-
-    const handlePassword = text => {
-        if(text.length >= 1){
-            setPassword(true);
-            setPasswordText(text)
-        }
-    }
-
-    const handleCheckbox = (newValue) => {
-        setTerms(newValue)
-        if(name == false && email == true && password == true){
-            setDisable(false);
-        }
-    }
+    const {
+        disable, 
+        setName,
+        emailText, 
+        passwordText, 
+        terms, 
+        subscribe, 
+        setSubscribe,
+        handleText,
+        handlePassword,
+        handleCheckbox
+    } = SignUpCustomHook();
 
     return (
-        <SignUpContainer >
+          <SignUpContainer >
             <SafeAreaView />
-            <PurpleText 
-                text={'Sign Up'}
-            />
+            <PurpleText text={'Sign Up'}/>
+
             <Block2>
                 <InputText>First Name </InputText>
-                <TextInput 
-                    setTextState={setName}
-                    
-                />
+                <TextInput setTextState={setName}/>
                 <InputText> Email </InputText>
-                <TextInput
-                    handleText={handleText}
-                />
+                <TextInput handleText={handleText}/>
                 <InputText> Password </InputText>
-                <PasswordInput 
-                   handlePassword={handlePassword}
-
-                />
+                <PasswordInput handlePassword={handlePassword}/>
                 <Instructions>Use 8 or more characters with a mix of letters, numbers and symbols.</Instructions>
             </Block2>
 
@@ -82,8 +56,8 @@ export const SignUpForm = (props) => {
                     />
                     <CheckBoxText>Subscribe for select product updates.</CheckBoxText>
                 </CheckBoxView>
-                
             </CheckboxContainer>
+
             <View>
                 <ButtonContainer>
                     <SignUpButton 
@@ -98,9 +72,7 @@ export const SignUpForm = (props) => {
                     <GoogleButton navigation={props.navigation}/> 
                 </ButtonContainer>
                 <FooterContainer> 
-                    <GrayText>Already have an account? 
-                        <Link to ={{ screen: 'Login' }} > <LinkStyle> Log In </LinkStyle> </Link>
-                    </GrayText>
+                    <GrayText>Already have an account? <Link to ={{ screen: 'Login' }} > <LinkStyle> Log In </LinkStyle> </Link></GrayText>
                 </FooterContainer>
             </View>
         </SignUpContainer>

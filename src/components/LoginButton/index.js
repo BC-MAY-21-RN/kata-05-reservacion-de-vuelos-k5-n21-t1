@@ -7,9 +7,7 @@ export const LoginButton = (props) => {
 
     const { email, password } = props
 
-    const showToast = (text) => {
-        ToastAndroid.show(text, ToastAndroid.LONG);
-    };
+    const showToast = (text) => { ToastAndroid.show(text, ToastAndroid.LONG); };
 
     return(
         <ContainerButton height={props.height}>
@@ -20,16 +18,12 @@ export const LoginButton = (props) => {
                     .signInWithEmailAndPassword(email, password)
                     .then(() => {
                         props.navigation.navigate(props.onPress)
-                        console.log('User signed in!');
                     })
                     .catch(error => {
-                        
                         if (error.code === 'auth/invalid-email') {
                             showToast('Invalid email or password, please try again')
-                            alert('Invalid email, please try again')
-                            
+                            alert('Invalid email, please try again')   
                         }
-
                     });
                 }}
             >

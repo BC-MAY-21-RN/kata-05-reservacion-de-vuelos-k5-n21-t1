@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import {SafeAreaView} from 'react-native';
 import {ArrowButton, BoldText, GeneralButton} from '../../components';
 import { PickerCountries } from '../../components/PickerCountries';
-import {
-  ContainerCenter,
-  ContainerTop,
-} from '../../components/Styled/generals';
+import { ContainerCenter, ContainerTop } from '../../components/Styled/generals';
 
 export const Origin = (props) => {
 
