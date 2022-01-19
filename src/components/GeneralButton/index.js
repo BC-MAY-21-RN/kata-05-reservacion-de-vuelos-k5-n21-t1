@@ -2,11 +2,8 @@ import React, { useState } from 'react'
 import { ButtonGeneral, TextGeneral ,ContainerButton} from './styled'
 
 export const GeneralButton = (props) => {
-    
-    const originCity = props.origin.substring(0, 3);
-    const originCountry = props.origin.substring(5);
-    const destinationCity = props.destination.substring(0,3);
-    const destinationCountry = props.destination.substring(5);
+
+    const substringFunc = (parameter, first, last) => parameter.substring(first, last)
 
     return (
         <ContainerButton height={props.height}>
@@ -16,11 +13,11 @@ export const GeneralButton = (props) => {
                     props.navigation.navigate(
                         props.onPress, {
                             origin: props.origin, 
-                            originCity: originCity,
-                            originCountry: originCountry,
+                            originCity: substringFunc(props.origin, 0, 3),
+                            originCountry: substringFunc(props.origin, 5),
                             destination: props.destination, 
-                            destinationCity: destinationCity,
-                            destinationCountry: destinationCountry,
+                            destinationCity: substringFunc(props.destination, 0, 3),
+                            destinationCountry: substringFunc(props.destination, 5),
                             date: props.date,
                             passengers: props.passengers
                     }) 

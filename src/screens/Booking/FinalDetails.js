@@ -8,7 +8,6 @@ import auth from '@react-native-firebase/auth';
 export const FinalDetails = (props) => {
 
   var id = auth().currentUser.uid
-  console.log(id);
   
   function uploadFlight () {
 

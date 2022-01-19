@@ -1,22 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {Calendar, LocaleConfig} from 'react-native-calendars';
 import { CalendarContainer } from './styled';
 
 LocaleConfig.locales['en'] = {
-    monthNames: [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ],
+    monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
     monthNamesShort: ['Jan.', 'Feb.', 'Mar', 'Apr', 'May', 'June', 'July.', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
     dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     dayNamesShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
@@ -45,7 +32,6 @@ export const CalendarDate = (props) => {
                     todayTextColor: 'black',
                 }}
                 onDayPress={day => {
-                    console.log('selected day', day);
                     props.setGuardarFecha(day)
                     props.setDisable(false)
                 }}
@@ -53,7 +39,6 @@ export const CalendarDate = (props) => {
                 current={today}
                 // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
                 minDate={today}
-                markingType={'custom'}
             />
         </CalendarContainer>
     )

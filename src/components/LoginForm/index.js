@@ -1,6 +1,6 @@
 import { Link } from '@react-navigation/native';
 import React, { useState } from 'react'
-import { GoogleButton, LoginButton, TextInput } from '..';
+import { LoginButton, TextInput } from '..';
 import { PasswordInput } from '../PasswordInput';
 import { GrayText, LinkStyle } from '../Styled/generals';
 import { Container, InputContainer, InputTitle, TextContainer } from './styled';
