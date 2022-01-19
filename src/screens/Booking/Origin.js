@@ -12,19 +12,12 @@ export const Origin = (props) => {
   return (
     <>
       <ContainerTop>
-        <ArrowButton 
-          navigation={props.navigation}
-        />
+        <ArrowButton navigation={props.navigation} />
         <ContainerCenter>
           <BoldText text={'Where are you now?'} />
-          <PickerCountries 
-            selectedCountry={props.selectedValue}
-            setCountry={setOrigin}
-            selectedNation={origin}
-          />
+          <PickerCountries selectedCountry={props.selectedValue} setCountry={setOrigin} selectedNation={origin} />
         </ContainerCenter>
-        <SafeAreaView/>
-        <SafeAreaView/>
+        <SafeAreaView/><SafeAreaView/>
         <GeneralButton 
           disabled={disable}
           text="Next"

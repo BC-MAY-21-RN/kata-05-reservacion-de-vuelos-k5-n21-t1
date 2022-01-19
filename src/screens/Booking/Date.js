@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
-import {
-  BoldText,
-  GeneralButton,
-  CalendarDate,
-  FlightDetails,
-  ArrowButton,
-} from '../../components';
+import { BoldText, GeneralButton, CalendarDate, FlightDetails, ArrowButton } from '../../components';
 import {ContainerCenter, ContainerTop} from '../../components/Styled/generals';
 
 export const Date = (props) => {
 
   const [disable, setDisable] = useState(true)
   const [guardarFecha, setGuardarFecha] = useState({});
-
 
   return (
     <ContainerTop>

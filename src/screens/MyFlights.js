@@ -9,16 +9,7 @@ import { MyFlightsHooks } from '../library/CustomHooks/MyFlightsHooks'
 
 export const MyFlights = (props) => {
 
-    const {
-        data,
-        setData,
-        rtData,
-        setRTData,
-        user,
-        setUser,
-        loadData,
-        loadRTData
-    } = MyFlightsHooks();
+    const { data, setData, rtData, setRTData, user, setUser, loadData, loadRTData } = MyFlightsHooks();
 
     useEffect(() => {
         loadData()

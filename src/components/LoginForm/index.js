@@ -4,27 +4,11 @@ import { LoginButton, TextInput } from '..';
 import { PasswordInput } from '../PasswordInput';
 import { GrayText, LinkStyle } from '../Styled/generals';
 import { Container, InputContainer, InputTitle, TextContainer } from './styled';
+import {LoginFormCustomHooks} from '../../library/CustomHooks/LoginFormCustomHooks'
 
 export const LoginForm = (props) => {
 
-    const [disable, setDisable] = useState(true)
-    const [email, setEmail] = useState(false)
-    const [emailText, setEmailText] = useState('');
-    const [passwordText, setPasswordText] = useState('');
-
-
-    const handleText = text => {
-        if(text.length >= 1){
-            setEmail(true);
-            setEmailText(text)
-        } 
-    }
-    const handlePassword = text => {
-        if(text.length >= 1 && email == true){
-            setDisable(false);
-            setPasswordText(text)
-        } 
-    }
+    const { disable, setDisable, email, setEmail, emailText, setEmailText, passwordText, setPasswordText, handleText, handlePassword } = LoginFormCustomHooks();
 
     return (
         <Container>
@@ -58,3 +42,4 @@ export const LoginForm = (props) => {
     )
 }
 
+ 

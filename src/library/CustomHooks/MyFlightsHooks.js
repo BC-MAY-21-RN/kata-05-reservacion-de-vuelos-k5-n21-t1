@@ -30,15 +30,5 @@ export const MyFlightsHooks = () => {
         })
     }
 
-    return{
-        data,
-        setData,
-        rtData,
-        setRTData,
-        user,
-        setUser,
-        loadData,
-        loadRTData
-    }
-    
+    return{ data, setData, rtData, setRTData, user, setUser, loadData, loadRTData }   
 }
