@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {
-  BoldText,
-  GeneralButton,
-  FlightDetails,
-  ArrowButton,
-} from '../../components';
+import { BoldText, GeneralButton, FlightDetails, ArrowButton} from '../../components';
 import { PickerCountries } from '../../components/PickerCountries';
-import {
-  InputLocation,
-  ContainerCenter,
-  ContainerTop,
-} from '../../components/Styled/generals';
+import { InputLocation, ContainerCenter, ContainerTop } from '../../components/Styled/generals';
 import {BorderBottom} from '../styled';
 
 export const Destination = (props) => {
@@ -19,13 +10,10 @@ export const Destination = (props) => {
   const [disable, setDisable] = useState(false)
   const [destination, setDestination] = useState("")
 
-
   return (
     <>
       <ContainerTop>
-        <ArrowButton 
-          navigation={props.navigation}
-          />
+        <ArrowButton navigation={props.navigation} />
         <FlightDetails
           OriginCity={props.route.params.originCity}
           OriginCountry={props.route.params.originCountry}
@@ -35,10 +23,7 @@ export const Destination = (props) => {
         <BorderBottom />
         <ContainerCenter>
           <BoldText text={'Where will you be flying to?'} />
-          <PickerCountries 
-            setCountry={setDestination}
-            selectedNation={destination}
-          />
+          <PickerCountries setCountry={setDestination} selectedNation={destination} />
         </ContainerCenter>
         <GeneralButton 
           height

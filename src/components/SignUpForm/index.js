@@ -9,18 +9,7 @@ import { SignUpCustomHook } from '../../library/CustomHooks/SignUpCustomHook';
 
 export const SignUpForm = (props) => {
 
-    const {
-        disable, 
-        setName,
-        emailText, 
-        passwordText, 
-        terms, 
-        subscribe, 
-        setSubscribe,
-        handleText,
-        handlePassword,
-        handleCheckbox
-    } = SignUpCustomHook();
+    const { disable, setName, emailText, passwordText, terms, subscribe, setSubscribe, handleText, handlePassword, handleCheckbox } = SignUpCustomHook();
 
     return (
           <SignUpContainer >
