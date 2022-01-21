@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { BoldText, GeneralButton, FlightDetails, ArrowButton} from '../../components';
 import { PickerCountries } from '../../components/PickerCountries';
-import { InputLocation, ContainerCenter, ContainerTop } from '../../components/Styled/generals';
+import { ContainerCenter, ContainerTop } from '../../components/Styled/generals';
 import {BorderBottom} from '../styled';
 
 export const Destination = (props) => {
 
-  const [disable, setDisable] = useState(false)
+  const [disable] = useState(false)
   const [destination, setDestination] = useState("")
 
   return (

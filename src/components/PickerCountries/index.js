@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Picker } from "@react-native-picker/picker";
-import { View } from "react-native";
 import { CountriesContainer } from "./styled";
 
 export const PickerCountries = (props) => {

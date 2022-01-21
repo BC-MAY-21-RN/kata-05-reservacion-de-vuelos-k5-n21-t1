@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import firestore from '@react-native-firebase/firestore';
-import auth from '@react-native-firebase/auth';
 
 export const MyFlightsHooks = () => {
     const [data, setData] = useState()
