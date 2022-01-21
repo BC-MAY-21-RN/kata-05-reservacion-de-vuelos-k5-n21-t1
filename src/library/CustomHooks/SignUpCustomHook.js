@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const SignUpCustomHook = () => {
     
     const [disable, setDisable] = useState(true);
     const [name, setName] = useState(false);
-    const [email, setEcmail] = useState(false);
+    const [email, setEmail] = useState(false);
     const [emailText, setEmailText] = useState('');
     const [password, setPassword] = useState(false);
     const [passwordText, setPasswordText] = useState('');

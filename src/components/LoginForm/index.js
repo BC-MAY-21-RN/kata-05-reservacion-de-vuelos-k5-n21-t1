@@ -1,5 +1,5 @@
 import { Link } from '@react-navigation/native';
-import React, { useState } from 'react'
+import React from 'react'
 import { LoginButton, TextInput } from '..';
 import { PasswordInput } from '../PasswordInput';
 import { GrayText, LinkStyle } from '../Styled/generals';
@@ -8,17 +8,19 @@ import {LoginFormCustomHooks} from '../../library/CustomHooks/LoginFormCustomHoo
 
 export const LoginForm = (props) => {
 
-    const { disable, setDisable, email, setEmail, emailText, setEmailText, passwordText, setPasswordText, handleText, handlePassword } = LoginFormCustomHooks();
+    const { disable, emailText, setEmailText, passwordText, setPasswordText, handleText, handlePassword } = LoginFormCustomHooks();
 
     return (
         <Container>
             <InputContainer>
                 <InputTitle>Email</InputTitle>
                 <TextInput 
+                    value={emailText}
                     handleText={handleText}
                 />
                 <InputTitle>Password</InputTitle>
                 <PasswordInput 
+                    value={passwordText}
                     handlePassword={handlePassword}
                 />
             </InputContainer>
@@ -28,7 +30,9 @@ export const LoginForm = (props) => {
                 onPress={'MyFlights'}
                 navigation={props.navigation}
                 email={emailText}
+                setEmail={setEmailText}
                 password={passwordText}
+                setPassword={setPasswordText}
             />
 
 

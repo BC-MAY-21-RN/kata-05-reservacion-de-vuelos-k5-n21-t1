@@ -4,7 +4,8 @@ import { Input } from "./styled";
 export const TextInput = (props) => {
 
     return(
-        <Input 
+        <Input
+            value={props.value} 
             onChangeText={props.handleText}
             autoCapitalize={false}
         />

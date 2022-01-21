@@ -5,7 +5,7 @@ import { ToastAndroid } from 'react-native';
 
 export const LoginButton = (props) => {
 
-    const { email, password } = props
+    const { email, password, setEmail, setPassword } = props
 
     const showToast = (text) => { ToastAndroid.show(text, ToastAndroid.LONG); };
 
@@ -25,6 +25,8 @@ export const LoginButton = (props) => {
                             alert('Invalid email, please try again')   
                         }
                     });
+                    setEmail("")
+                    setPassword("")
                 }}
             >
                 <TextGeneral>{props.text}</TextGeneral>
