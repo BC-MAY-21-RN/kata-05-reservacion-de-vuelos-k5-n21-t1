@@ -1,4 +1,5 @@
 <a href="https://codeclimate.com/github/BC-MAY-21-RN/kata-05-reservacion-de-vuelos-k5-n21-t1/maintainability"><img src="https://api.codeclimate.com/v1/badges/1f4986aabf5db9b18dd4/maintainability" width="500px"/></a>
+<a href="https://deepscan.io/dashboard#view=project&tid=16284&pid=19513&bid=508971"><img src="https://deepscan.io/api/teams/16284/projects/19513/branches/508971/badge/grade.svg" alt="DeepScan grade"></a>
 
 ![BrightCoders Logo](img/logo-bc.png)
 
