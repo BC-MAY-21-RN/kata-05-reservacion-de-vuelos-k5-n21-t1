@@ -1,6 +1,6 @@
 import { Link } from '@react-navigation/native';
 import React from 'react'
-import { LoginButton, TextInput } from '..';
+import { GoogleButton, LoginButton, TextInput } from '..';
 import { PasswordInput } from '../PasswordInput';
 import { GrayText, LinkStyle } from '../Styled/generals';
 import { Container, InputContainer, InputTitle, TextContainer } from './styled';
@@ -34,8 +34,7 @@ export const LoginForm = (props) => {
                 password={passwordText}
                 setPassword={setPasswordText}
             />
-
-
+            <GoogleButton navigation={props.navigation}/> 
             <TextContainer>          
                 <GrayText>Don't have an account? </GrayText>
                 <Link to ={{ screen: 'SignUp' }}>
